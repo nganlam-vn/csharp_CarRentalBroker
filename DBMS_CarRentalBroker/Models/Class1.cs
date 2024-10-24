@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarRentalBroker.Models
 {
-    internal class NguoiDung
+    internal class Class1
     {
     }
 }
