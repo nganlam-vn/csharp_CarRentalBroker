@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,7 +62,37 @@
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\ChuXe\DangKyXe.cs" />
+    <Compile Include="Views\Admin\FAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FAdmin.Designer.cs" />
+    <Compile Include="Views\Admin\FCapNhatXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FCapNhatXe.Designer.cs" />
+    <Compile Include="Views\Admin\FChiTietXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FChiTietXe.Designer.cs" />
+    <Compile Include="Views\Admin\FDanhSachDangKyXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FDanhSachDangKyXe.Designer.cs" />
+    <Compile Include="Views\Admin\FXeChuaChoThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FXeChuaChoThue.Designer.cs" />
+    <Compile Include="Views\Admin\FXeGiaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FXeGiaHan.Designer.cs" />
+    <Compile Include="Views\Admin\UCDanhSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\UCDanhSach.Designer.cs" />
+    <Compile Include="Views\ChuXe\DangKyXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\ChuXe\DangKyXe.Designer.cs">
       <DependentUpon>DangKyXe.cs</DependentUpon>
     </Compile>
@@ -69,7 +105,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Admin\FAdmin.resx" />
+    <EmbeddedResource Include="Views\Admin\FCapNhatXe.resx" />
+    <EmbeddedResource Include="Views\Admin\FChiTietXe.resx" />
+    <EmbeddedResource Include="Views\Admin\FDanhSachDangKyXe.resx" />
+    <EmbeddedResource Include="Views\Admin\FXeChuaChoThue.resx" />
+    <EmbeddedResource Include="Views\Admin\FXeGiaHan.resx" />
+    <EmbeddedResource Include="Views\Admin\UCDanhSach.resx" />
     <None Include="bin\Debug\DBMS_CarRentalBroker.exe.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -87,5 +131,6 @@
     <Content Include="bin\Debug\DBMS_CarRentalBroker.exe" />
     <Content Include="bin\Debug\DBMS_CarRentalBroker.pdb" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
