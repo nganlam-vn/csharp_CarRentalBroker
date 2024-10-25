@@ -1,6 +1,6 @@
-﻿namespace DBMS_CarRentalBroker.Views.Admin
+﻿namespace DBMS_CarRentalBroker.Views.NguoiThue
 {
-    partial class FAdmin
+    partial class FormTam2
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FAdmin";
+            this.Text = "FormTam2";
         }
 
         #endregion

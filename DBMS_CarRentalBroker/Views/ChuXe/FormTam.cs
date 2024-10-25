@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CarRentalBroker.Views.Admin
+namespace DBMS_CarRentalBroker.Views.ChuXe
 {
-    public partial class UCDanhSach : UserControl
+    public partial class FormTam : Form
     {
-        public UCDanhSach()
+        public FormTam()
         {
             InitializeComponent();
         }

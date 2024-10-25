@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DBMS_CarRentalBroker.Views.Admin
+namespace DBMS_CarRentalBroker.Views
 {
-    public partial class FAdmin : Form
+    public partial class Form2 : Form
     {
-        public FAdmin()
+        public Form2()
         {
             InitializeComponent();
         }

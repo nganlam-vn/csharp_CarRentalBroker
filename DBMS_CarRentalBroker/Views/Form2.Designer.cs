@@ -1,6 +1,6 @@
-﻿namespace CarRentalBroker.Views.ChuXe
+﻿namespace DBMS_CarRentalBroker.Views
 {
-    partial class DangKyXe
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "DangKyXe";
+            this.Text = "Form2";
         }
 
         #endregion
