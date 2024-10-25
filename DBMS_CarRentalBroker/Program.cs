@@ -1,4 +1,5 @@
-﻿using CarRentalBroker.Views.Admin;
+﻿using CarRentalBroker.Views;
+using CarRentalBroker.Views.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace DBMS_CarRentalBroker
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FAdmin());
+            Application.Run(new FDangNhap());
         }
     }
 }
