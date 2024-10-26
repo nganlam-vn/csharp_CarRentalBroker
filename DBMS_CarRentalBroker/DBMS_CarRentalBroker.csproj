@@ -68,6 +68,18 @@
     <Compile Include="Views\Admin\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\FDanhSachDangKyXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FDanhSachDangKyXe.Designer.cs">
+      <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FXeDaChoThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FXeDaChoThue.Designer.cs">
+      <DependentUpon>FXeDaChoThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ChuXe\FormTam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Admin\FAdmin.resx">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FDanhSachDangKyXe.resx">
+      <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FXeDaChoThue.resx">
+      <DependentUpon>FXeDaChoThue.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bin\Debug\DBMS_CarRentalBroker.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
