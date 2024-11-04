@@ -1,3 +1,4 @@
+﻿using DBMS_CarRentalBroker.Views.NguoiThue;
 ﻿using DBMS_CarRentalBroker.Views.ChuXe;
 ﻿using DBMS_CarRentalBroker.Views;
 using System;
