@@ -2,6 +2,8 @@
 using DBMS_CarRentalBroker.Common;
 using DBMS_CarRentalBroker.Models;
 using DBMS_CarRentalBroker.Views.Admin;
+using DBMS_CarRentalBroker.Views.ChuXe;
+using DBMS_CarRentalBroker.Views.NguoiThue;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,7 +33,17 @@ namespace DBMS_CarRentalBroker.Views
                     this.Hide();
                     if(Global.maVT == 1)
                     {
-                        FQuanLyNguoiDung fMain = new FQuanLyNguoiDung();
+                        FAdmin fMain = new FAdmin();
+                        fMain.ShowDialog();
+                    }
+                    else if(Global.maVT == 2)
+                    {
+                        FChuXeTrangChu fMain = new FChuXeTrangChu();
+                        fMain.ShowDialog();
+                    }
+                    else if(Global.maVT == 3)
+                    {
+                        FTrangChu fMain = new FTrangChu();
                         fMain.ShowDialog();
                     }
                     this.Close();

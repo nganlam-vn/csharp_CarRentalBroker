@@ -132,9 +132,6 @@
     <Compile Include="Views\Admin\FXeDaChoThue.Designer.cs">
       <DependentUpon>FXeDaChoThue.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ChuXe\FormTam.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Views\ChuXe\FChinhSuaXe.Designer.cs">
       <DependentUpon>FChinhSuaXe.cs</DependentUpon>
     </Compile>
@@ -378,7 +375,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
