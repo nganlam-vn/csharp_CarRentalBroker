@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBMS_CarRentalBroker.Views.ChuXe
 {
-    public partial class FormTam : Form
+    public partial class FChiTietHoaDon : Form
     {
-        public FormTam()
+        public FChiTietHoaDon(int maPhi)
         {
             InitializeComponent();
         }

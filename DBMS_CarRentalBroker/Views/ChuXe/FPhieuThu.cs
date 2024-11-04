@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DBMS_CarRentalBroker.Views.NguoiThue
+namespace DBMS_CarRentalBroker.Views.ChuXe
 {
-    public partial class FormTam2 : Form
+    public partial class FPhieuThu : Form
     {
-        public FormTam2()
+        public FPhieuThu()
         {
             InitializeComponent();
         }

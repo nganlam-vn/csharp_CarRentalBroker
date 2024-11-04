@@ -1,6 +1,6 @@
-﻿namespace DBMS_CarRentalBroker.Views.NguoiThue
+﻿namespace DBMS_CarRentalBroker.Views.ChuXe
 {
-    partial class FormTam2
+    partial class FChiTietHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormTam2";
+            this.Text = "FChiTietHoaDon";
         }
 
         #endregion
