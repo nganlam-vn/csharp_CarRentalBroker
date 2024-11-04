@@ -289,9 +289,6 @@
     <EmbeddedResource Include="Views\Admin\ChiTietNguoiDung.resx">
       <DependentUpon>ChiTietNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\FAdmin.resx">
-      <DependentUpon>FAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FQuanLyNguoiDung.resx">
       <DependentUpon>FQuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
