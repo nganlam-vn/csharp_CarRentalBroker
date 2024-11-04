@@ -1,6 +1,6 @@
 ﻿namespace DBMS_CarRentalBroker.Views.Admin
 {
-    partial class FAdmin
+    partial class ChiTietNguoiDung
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // FAdmin
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(96, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // ChiTietNguoiDung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FAdmin";
-            this.Text = "FAdmin";
+            this.ClientSize = new System.Drawing.Size(404, 566);
+            this.Controls.Add(this.label1);
+            this.Name = "ChiTietNguoiDung";
+            this.Text = "ChiTietNguoiDung";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }
