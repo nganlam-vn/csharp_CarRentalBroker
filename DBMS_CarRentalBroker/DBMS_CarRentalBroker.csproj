@@ -89,13 +89,14 @@
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ChuXe\FChinhSuaXe.cs">
-
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Views\Admin\FQuanLyNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Admin\FQuanLyNguoiDung.Designer.cs">
       <DependentUpon>FQuanLyNguoiDung.cs</DependentUpon>
-
+    </Compile>
     <Compile Include="Views\Admin\FChiTietXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +126,6 @@
     </Compile>
     <Compile Include="Views\Admin\FXeDaChoThue.Designer.cs">
       <DependentUpon>FXeDaChoThue.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Views\ChuXe\FormTam.cs">
       <SubType>Form</SubType>
@@ -285,7 +285,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ChuXe\FXeCuaToi.resx">
       <DependentUpon>FXeCuaToi.cs</DependentUpon>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\ChiTietNguoiDung.resx">
       <DependentUpon>ChiTietNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,7 +297,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FDangNhap.resx">
       <DependentUpon>FDangNhap.cs</DependentUpon>
-
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +328,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
