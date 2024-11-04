@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBMS_CarRentalBroker.Models
+namespace CarRentalBroker.Models
 {
     internal class NguoiDung
     {
@@ -32,5 +32,4 @@ namespace DBMS_CarRentalBroker.Models
         public string SoGPLX { get => soGPLX; set => soGPLX = value; }
         public int? MaTKNH { get => maTKNH; set => maTKNH = value; }
     }
-
 }

@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\XeDAO.cs" />
+    <Compile Include="Common\DBConnect.cs" />
+    <Compile Include="Common\Global.cs" />
+    <Compile Include="DBConnection1.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,9 +69,19 @@
     <Compile Include="Models\NguoiDung.cs" />
     <Compile Include="Models\PhiBaiDang.cs" />
     <Compile Include="Models\Xe.cs" />
+    <Compile Include="Models\NguoiDung.cs" />
+    <Compile Include="Dao\NguoiDungDao.cs" />
+    <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Dao\TaiKhoanDao.cs" />
+    <Compile Include="Views\Admin\ChiTietNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\ChiTietNguoiDung.Designer.cs">
+      <DependentUpon>ChiTietNguoiDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\FAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +89,45 @@
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ChuXe\FChinhSuaXe.cs">
+
+    <Compile Include="Views\Admin\FQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>FQuanLyNguoiDung.cs</DependentUpon>
+
+    <Compile Include="Views\Admin\FChiTietXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FChiTietXe.Designer.cs">
+      <DependentUpon>FChiTietXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FDanhSachDangKyXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FDanhSachDangKyXe.Designer.cs">
+      <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FTop5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FTop5.Designer.cs">
+      <DependentUpon>FTop5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FXeChoGiaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FXeChoGiaHan.Designer.cs">
+      <DependentUpon>FXeChoGiaHan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FXeDaChoThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FXeDaChoThue.Designer.cs">
+      <DependentUpon>FXeDaChoThue.cs</DependentUpon>
+
+    </Compile>
+    <Compile Include="Views\ChuXe\FormTam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\ChuXe\FChinhSuaXe.Designer.cs">
@@ -165,6 +217,12 @@
     <Compile Include="Views\ChuXe\FXeCuaToi.Designer.cs">
       <DependentUpon>FXeCuaToi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FDangNhap.Designer.cs">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +285,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ChuXe\FXeCuaToi.resx">
       <DependentUpon>FXeCuaToi.cs</DependentUpon>
+
+    <EmbeddedResource Include="Views\Admin\ChiTietNguoiDung.resx">
+      <DependentUpon>ChiTietNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FAdmin.resx">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FQuanLyNguoiDung.resx">
+      <DependentUpon>FQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FDangNhap.resx">
+      <DependentUpon>FDangNhap.cs</DependentUpon>
+
+    <EmbeddedResource Include="Views\Admin\FAdmin.resx">
+      <DependentUpon>FAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FChiTietXe.resx">
+      <DependentUpon>FChiTietXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FDanhSachDangKyXe.resx">
+      <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FTop5.resx">
+      <DependentUpon>FTop5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FXeChoGiaHan.resx">
+      <DependentUpon>FXeChoGiaHan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FXeDaChoThue.resx">
+      <DependentUpon>FXeDaChoThue.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\DBMS_CarRentalBroker.exe.config" />
     <None Include="packages.config" />
