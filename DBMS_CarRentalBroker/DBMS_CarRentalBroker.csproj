@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection1.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,11 +69,29 @@
     <Compile Include="Views\Admin\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\FChiTietXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FChiTietXe.Designer.cs">
+      <DependentUpon>FChiTietXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\FDanhSachDangKyXe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Admin\FDanhSachDangKyXe.Designer.cs">
       <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FTop5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FTop5.Designer.cs">
+      <DependentUpon>FTop5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FXeChoGiaHan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FXeChoGiaHan.Designer.cs">
+      <DependentUpon>FXeChoGiaHan.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\FXeDaChoThue.cs">
       <SubType>Form</SubType>
@@ -110,8 +129,17 @@
     <EmbeddedResource Include="Views\Admin\FAdmin.resx">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FChiTietXe.resx">
+      <DependentUpon>FChiTietXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FDanhSachDangKyXe.resx">
       <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FTop5.resx">
+      <DependentUpon>FTop5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FXeChoGiaHan.resx">
+      <DependentUpon>FXeChoGiaHan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FXeDaChoThue.resx">
       <DependentUpon>FXeDaChoThue.cs</DependentUpon>

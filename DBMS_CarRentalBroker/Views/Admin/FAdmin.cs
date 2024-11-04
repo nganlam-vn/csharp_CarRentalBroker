@@ -49,12 +49,14 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void btnGiaHan_Click(object sender, EventArgs e)
         {
-
+            FXeChoGiaHan fXeChoGiaHan = new FXeChoGiaHan();
+            OpenChildForm(fXeChoGiaHan);
         }
 
         private void btnBestSeller_Click(object sender, EventArgs e)
         {
-
+            FTop5 fTop5 = new FTop5();
+            OpenChildForm(fTop5);
         }
 
         private void btnHopDong_Click(object sender, EventArgs e)

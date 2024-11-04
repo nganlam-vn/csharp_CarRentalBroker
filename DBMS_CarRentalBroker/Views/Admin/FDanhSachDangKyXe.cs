@@ -15,6 +15,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
 {
     public partial class FDanhSachDangKyXe : Form
     {
+        DBConnection1 db = new DBConnection1();
         public FDanhSachDangKyXe()
         {
             InitializeComponent();
@@ -29,65 +30,50 @@ namespace DBMS_CarRentalBroker.Views.Admin
         }
 
         private void XeChoDuyet_Load() {
-            using (SqlConnection conn = new SqlConnection(DBMS_CarRentalBroker.Properties.Settings.Default.cnnStr))
+            SqlConnection conn = db.layKetNoi();
+            using (conn)
             {
-                string query = "SELECT * FROM ViewXeDangChoDuyet";
-                SqlCommand command = new SqlCommand(query, conn);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                string query = "SELECT * FROM v_XeDangChoDuyet";
+
                 DataTable dataTable = new DataTable();
-
-                conn.Open();
-                adapter.Fill(dataTable);
-                conn.Close();
-
+                dataTable = db.thucThiDataTable(query);
                 gvChoDuyet.DataSource = dataTable;
             }
         }
 
         private void XeTuChoi_Load()
         {
-            using (SqlConnection conn = new SqlConnection(DBMS_CarRentalBroker.Properties.Settings.Default.cnnStr))
-            {
-                string query = "SELECT * FROM ViewXeTuChoi";
-                SqlCommand command = new SqlCommand(query, conn);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+            SqlConnection conn = db.layKetNoi();
+            using (conn) { 
+                string query = "SELECT * FROM v_XeTuChoi";
+                
                 DataTable dataTable = new DataTable();
-
-                conn.Open();
-                adapter.Fill(dataTable);
-                conn.Close();
-
+                dataTable = db.thucThiDataTable(query);
                 gvTuChoi.DataSource = dataTable;
             }
         }
 
         private void btnTuChoi_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(DBMS_CarRentalBroker.Properties.Settings.Default.cnnStr))
+            SqlConnection conn = db.layKetNoi();
+           
+            using (conn)
             {
+                conn.Open();
                 
                 try
                 {
                     
                     if (selectedXeId != -1)
                     {
-                        conn.Open();
-
                         // Sử dụng SqlCommand để thực hiện truy vấn
                         using (SqlCommand command = new SqlCommand("proc_TuChoi", conn))
                         {
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@MaXe", selectedXeId);
-                            // Add the output parameter
-                            SqlParameter messageParam = new SqlParameter("@Message", SqlDbType.NVarChar, 200);
-                            messageParam.Direction = ParameterDirection.Output;
-                            command.Parameters.Add(messageParam);
-                            //chay lenh
-                            command.ExecuteNonQuery();
-                            //lấy lời nhắn từ procedure trong sql server
-
-                            string message = messageParam.Value.ToString();
-                            MessageBox.Show(message);
+                            command.ExecuteNonQuery(); //executeNonQuery thực hiện câu lệnh sql như insert, update, delete
+                            MessageBox.Show("Xe đã được từ chối.");
                             XeChoDuyet_Load();
                             XeTuChoi_Load();
                            
@@ -149,6 +135,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             // Kiểm tra xem dòng nào được chọn (tránh trường hợp nhấp vào tiêu đề cột)
             try
             {
+                
                 if (e.RowIndex >= 0)
                 {
                     // Lấy hàng hiện tại
@@ -176,31 +163,24 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void btnDuyet_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(DBMS_CarRentalBroker.Properties.Settings.Default.cnnStr))
+            SqlConnection conn = db.layKetNoi();
+
+            using (conn)
             {
+                conn.Open();
 
                 try
                 {
 
                     if (selectedXeId != -1)
                     {
-                        conn.Open();
-
                         // Sử dụng SqlCommand để thực hiện truy vấn
                         using (SqlCommand command = new SqlCommand("proc_Duyet", conn))
                         {
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@MaXe", selectedXeId);
-                            // Add the output parameter
-                            SqlParameter messageParam = new SqlParameter("@Message", SqlDbType.NVarChar, 200);
-                            messageParam.Direction = ParameterDirection.Output;
-                            command.Parameters.Add(messageParam);
-                            //chay lenh
-                            command.ExecuteNonQuery();
-                            //lấy lời nhắn từ procedure trong sql server
-
-                            string message = messageParam.Value.ToString();
-                            MessageBox.Show(message);
+                            command.ExecuteNonQuery(); //executeNonQuery thực hiện câu lệnh sql như insert, update, delete
+                            MessageBox.Show("Xe đã được duyệt.");
                             XeChoDuyet_Load();
                             XeTuChoi_Load();
 
@@ -223,7 +203,6 @@ namespace DBMS_CarRentalBroker.Views.Admin
                     conn.Close();
                 }
             }
-
         }
     }
 }

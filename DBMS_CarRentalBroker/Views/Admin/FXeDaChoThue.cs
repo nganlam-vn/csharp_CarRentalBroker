@@ -13,6 +13,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
 {
     public partial class FXeDaChoThue : Form
     {
+        DBConnection1 db = new DBConnection1();
         private int selectedXeId = -1;
         public FXeDaChoThue()
         {
@@ -53,16 +54,12 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void FXeDaChoThue_Load(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(DBMS_CarRentalBroker.Properties.Settings.Default.cnnStr))
+            SqlConnection conn = db.layKetNoi();
+            using (conn) 
             {
-                string query = "SELECT * FROM ViewXeDaThue";
-                SqlCommand command = new SqlCommand(query, conn);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                string query = "SELECT * FROM v_XeDaThue";
                 DataTable dataTable = new DataTable();
-
-                conn.Open();
-                adapter.Fill(dataTable);
-                conn.Close();
+                dataTable = db.thucThiDataTable(query);
 
                 gvXeDaThue.DataSource = dataTable;
             }
