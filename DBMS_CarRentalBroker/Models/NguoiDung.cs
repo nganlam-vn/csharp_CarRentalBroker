@@ -18,7 +18,7 @@ namespace CarRentalBroker.Models
         private string quocTich;
         private string soDienThoai;
         private string soGPLX;
-        private string maTKNH;
+        private int? maTKNH;
 
         public int MaND { get => maND; set => maND = value; }
         public int MaVT { get => maVT; set => maVT = value; }
@@ -30,7 +30,6 @@ namespace CarRentalBroker.Models
         public string QuocTich { get => quocTich; set => quocTich = value; }
         public string SoDienThoai { get => soDienThoai; set => soDienThoai = value; }
         public string SoGPLX { get => soGPLX; set => soGPLX = value; }
-        public string MaTKNH { get => maTKNH; set => maTKNH = value; }
-
+        public int? MaTKNH { get => maTKNH; set => maTKNH = value; }
     }
 }

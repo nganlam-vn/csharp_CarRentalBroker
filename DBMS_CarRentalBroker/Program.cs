@@ -1,3 +1,4 @@
+﻿using DBMS_CarRentalBroker.Views.ChuXe;
 ﻿using DBMS_CarRentalBroker.Views;
 using System;
 using System.Collections.Generic;
