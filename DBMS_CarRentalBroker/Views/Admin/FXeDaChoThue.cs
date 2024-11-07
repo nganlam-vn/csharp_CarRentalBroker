@@ -31,9 +31,9 @@ namespace DBMS_CarRentalBroker.Views.Admin
                     DataGridViewRow selectedRow = gvXeDaThue.Rows[e.RowIndex];
                     int idXe = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
                     selectedXeId = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
-                    //FChiTietXe fChiTietXe = new FChiTietXe(idXe);
-                    //fChiTietXe.Show();
-                    MessageBox.Show("Xe đã chọn: " + idXe);
+                    FChiTietXe fChiTietXe = new FChiTietXe(idXe);
+                    fChiTietXe.Show();
+                    //MessageBox.Show("Xe đã chọn: " + idXe);
 
 
                 }
@@ -47,8 +47,6 @@ namespace DBMS_CarRentalBroker.Views.Admin
             {
                 MessageBox.Show(exc.Message);
             }
-
-
 
         }
 
@@ -64,5 +62,6 @@ namespace DBMS_CarRentalBroker.Views.Admin
                 gvXeDaThue.DataSource = dataTable;
             }
         }
+
     }
 }

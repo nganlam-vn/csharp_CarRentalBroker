@@ -38,7 +38,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(205, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(621, 46);
             this.label1.TabIndex = 3;
@@ -48,18 +48,19 @@
             // 
             this.gvXeChoGiaHan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvXeChoGiaHan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvXeChoGiaHan.Location = new System.Drawing.Point(111, 61);
+            this.gvXeChoGiaHan.Location = new System.Drawing.Point(1, 58);
             this.gvXeChoGiaHan.Name = "gvXeChoGiaHan";
             this.gvXeChoGiaHan.RowHeadersWidth = 62;
             this.gvXeChoGiaHan.RowTemplate.Height = 28;
-            this.gvXeChoGiaHan.Size = new System.Drawing.Size(801, 391);
+            this.gvXeChoGiaHan.Size = new System.Drawing.Size(722, 391);
             this.gvXeChoGiaHan.TabIndex = 2;
+            this.gvXeChoGiaHan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvXeChoGiaHan_CellClick);
             // 
             // FXeChoGiaHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 450);
+            this.ClientSize = new System.Drawing.Size(792, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gvXeChoGiaHan);
             this.Name = "FXeChoGiaHan";
