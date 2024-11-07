@@ -33,7 +33,8 @@ namespace DBMS_CarRentalBroker.Views
                     this.Hide();
                     if(Global.maVT == 1)
                     {
-                        FAdmin fMain = new FAdmin();
+                        //FAdmin fMain = new FAdmin();
+                        FQuanLyNguoiDung fMain = new FQuanLyNguoiDung();
                         fMain.ShowDialog();
                     }
                     else if(Global.maVT == 2)

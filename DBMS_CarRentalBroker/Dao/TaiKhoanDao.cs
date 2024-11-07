@@ -13,9 +13,23 @@ namespace CarRentalBroker.Dao
 {
     internal class TaiKhoanDao
     {
+        DBConnect db = new DBConnect();
+        public TaiKhoan layTaiKhoan(int maND)
+        {
+            String sqlString = String.Format("SELECT * FROM TaiKhoan WHERE MaND = {0}", maND);
+            DataTable dataTable = db.thucThiDataTable(sqlString);
+
+            TaiKhoan taiKhoan = new TaiKhoan();
+            taiKhoan.TenDangNhap = dataTable.Rows[0]["TenDangNhap"].ToString();
+            taiKhoan.MatKhau = dataTable.Rows[0]["MatKhau"].ToString();
+            taiKhoan.MaND = Convert.ToInt32(dataTable.Rows[0]["MaND"]);
+            taiKhoan.MaVT = Convert.ToInt32(dataTable.Rows[0]["MaVT"]);
+
+            return taiKhoan;
+        }
+
         public bool dangNhap(TaiKhoan taiKhoan)
         {
-            DBConnect db = new DBConnect();
             String sqlString = String.Format("EXEC dbo.pro_ThemLichSuDangNhap '{0}', '{1}'", taiKhoan.TenDangNhap, taiKhoan.MatKhau);
             DataTable result;
             try
@@ -37,6 +51,12 @@ namespace CarRentalBroker.Dao
                 throw e;
             }
             return false;
+        }
+
+        public void dangXuat()
+        {
+            string stringSQL = String.Format("EXEC dbo.pro_CapNhatDangXuat");
+            db.thucThi(stringSQL);
         }
     }
 }

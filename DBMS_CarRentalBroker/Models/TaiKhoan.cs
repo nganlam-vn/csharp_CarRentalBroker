@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DBMS_CarRentalBroker.Models
 {
-    internal class TaiKhoan
+    public class TaiKhoan
     {
         private string tenDangNhap;
         private string matKhau;
-        private string maND;
-        private string maVT;
+        private int maND;
+        private int maVT;
 
-        public TaiKhoan(string tenDangNhap, string matKhau, string maND, string maVT)
+        public TaiKhoan(string tenDangNhap, string matKhau, int maND, int maVT)
         {
             this.tenDangNhap = tenDangNhap;
             this.matKhau = matKhau;
@@ -27,9 +27,13 @@ namespace DBMS_CarRentalBroker.Models
             this.matKhau = matKhau;
         }
 
+        public TaiKhoan()
+        {
+        }
+
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
-        public string MaND { get => maND; set => maND = value; }
-        public string MaVT { get => maVT; set => maVT = value; }
+        public int MaND { get => maND; set => maND = value; }
+        public int MaVT { get => maVT; set => maVT = value; }
     }
 }

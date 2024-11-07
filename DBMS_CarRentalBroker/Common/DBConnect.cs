@@ -14,7 +14,7 @@ namespace CarRentalBroker
     {
         public SqlConnection layKetNoi()
         {
-            return new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=CarRentalBroker;User ID=" + Global.tenDangNhap + ";Password=" + Global.matKhau + ";Encrypt=False;TrustServerCertificate=True");
+            return new SqlConnection(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=CarRentalBroker;User ID=" + Global.tenDangNhap + ";Password=" + Global.matKhau + ";");
         }
 
         public void thucThi(string sqlString)
