@@ -22,8 +22,9 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("p_LayChiTietXe", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                string query = "SELECT * FROM func_LayChiTietXe(@MaXe)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.Text;
                 command.Parameters.AddWithValue("@MaXe", maXe);
 
                 connection.Open();
@@ -66,8 +67,9 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("p_LayChiTietGiaThue", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                string query = "SELECT * FROM func_LayChiTietGiaThue(@MaXe)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.Text;
                 command.Parameters.AddWithValue("@MaXe", maXe);
 
                 connection.Open();
@@ -98,7 +100,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("p_XoaXe", connection);
+                SqlCommand command = new SqlCommand("p_XoaGiaThue", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@MaXe", maXe);
 
@@ -109,7 +111,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("p_XoaGiaThue", connection);
+                SqlCommand command = new SqlCommand("p_XoaXe", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("@MaXe", maXe);
 
@@ -139,13 +141,13 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                 xe.PhanKhoi = Convert.ToInt32(txtPhanKhoi.Text);
                 xe.ThuongHieu = txtThuongHieu.Text;
 
-                SuaXe(xe);
-
                 decimal giaTheoGio = Convert.ToDecimal(txtGiaTheoGio.Text);
                 decimal giaTheoNgay = Convert.ToDecimal(txtGiaTheoNgay.Text);
                 decimal giaTheoThang = Convert.ToDecimal(txtGiaTheoThang.Text);
 
                 SuaGiaThue(xe.MaXe, giaTheoGio, giaTheoNgay, giaTheoThang);
+
+                SuaXe(xe);
 
                 MessageBox.Show("Thông tin xe và giá thuê đã được cập nhật thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

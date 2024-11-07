@@ -82,6 +82,7 @@
             this.btnThanhToan.Size = new System.Drawing.Size(180, 45);
             this.btnThanhToan.TabIndex = 96;
             this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // chkLaXeDien
             // 

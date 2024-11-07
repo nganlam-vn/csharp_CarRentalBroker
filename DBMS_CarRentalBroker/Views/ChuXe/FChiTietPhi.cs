@@ -59,34 +59,26 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                 {
                     connection.Open();
 
-                    SqlCommand checkBalanceCommand = new SqlCommand("f_LaySoDu", connection);
-                    checkBalanceCommand.CommandType = CommandType.StoredProcedure;
-                    checkBalanceCommand.Parameters.AddWithValue("@MaND", maND);
+                    // Gọi stored procedure `sp_ThanhToanPhi` để kiểm tra xem có đủ số dư và thực hiện thanh toán
+                    SqlCommand thanhToanCommand = new SqlCommand("p_ThanhToanPhi", connection);
+                    thanhToanCommand.CommandType = CommandType.StoredProcedure;
+                    thanhToanCommand.Parameters.AddWithValue("@MaND", maND);
+                    thanhToanCommand.Parameters.AddWithValue("@MaPhi", maPhi);
 
-                    float soDu = Convert.ToSingle(checkBalanceCommand.ExecuteScalar());
-                    float soTien = float.Parse(txtSoTien.Text);
+                    // Tham số đầu ra để nhận kết quả
+                    SqlParameter resultParam = new SqlParameter("@Result", SqlDbType.Bit) { Direction = ParameterDirection.Output };
+                    thanhToanCommand.Parameters.Add(resultParam);
 
-                    if (soDu >= soTien)
+                    // Thực hiện stored procedure
+                    thanhToanCommand.ExecuteNonQuery();
+
+                    // Lấy kết quả từ tham số đầu ra
+                    bool thanhToanThanhCong = Convert.ToBoolean(resultParam.Value);
+                    if (thanhToanThanhCong) // Nếu kết quả là true, nghĩa là thanh toán thành công
                     {
-                        SqlCommand thanhToanCommand = new SqlCommand("p_ThanhToan", connection);
-                        thanhToanCommand.CommandType = CommandType.StoredProcedure;
-                        thanhToanCommand.Parameters.AddWithValue("@MaND", maND);
-                        thanhToanCommand.Parameters.AddWithValue("@MaPhi", maPhi);
-                        thanhToanCommand.Parameters.AddWithValue("@SoTien", soTien);
-                        thanhToanCommand.Parameters.AddWithValue("@NoiDung", $"Thanh toán phí đăng cho xe {txtTenXe.Text}");
-
-                        int result = thanhToanCommand.ExecuteNonQuery();
-
-                        if (result > 0)
-                        {
-                            MessageBox.Show("Thanh toán thành công!");
-                            ThanhToanThanhCong?.Invoke();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Đã xảy ra lỗi khi thực hiện thanh toán.");
-                        }
+                        MessageBox.Show("Thanh toán thành công!");
+                        ThanhToanThanhCong?.Invoke();
+                        this.Close();
                     }
                     else
                     {

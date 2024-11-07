@@ -49,13 +49,13 @@
             this.tbTenDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTenDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbTenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTenDangNhap.Location = new System.Drawing.Point(476, 200);
-            this.tbTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbTenDangNhap.Location = new System.Drawing.Point(423, 160);
+            this.tbTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTenDangNhap.Name = "tbTenDangNhap";
             this.tbTenDangNhap.PasswordChar = '\0';
             this.tbTenDangNhap.PlaceholderText = "";
             this.tbTenDangNhap.SelectedText = "";
-            this.tbTenDangNhap.Size = new System.Drawing.Size(339, 60);
+            this.tbTenDangNhap.Size = new System.Drawing.Size(301, 48);
             this.tbTenDangNhap.TabIndex = 0;
             // 
             // tbMatKhau
@@ -69,21 +69,22 @@
             this.tbMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tbMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbMatKhau.Location = new System.Drawing.Point(476, 310);
-            this.tbMatKhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbMatKhau.Location = new System.Drawing.Point(423, 248);
+            this.tbMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMatKhau.Name = "tbMatKhau";
             this.tbMatKhau.PasswordChar = '●';
             this.tbMatKhau.PlaceholderText = "";
             this.tbMatKhau.SelectedText = "";
-            this.tbMatKhau.Size = new System.Drawing.Size(339, 60);
+            this.tbMatKhau.Size = new System.Drawing.Size(301, 48);
             this.tbMatKhau.TabIndex = 2;
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2Panel1.Location = new System.Drawing.Point(-1, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(378, 536);
+            this.guna2Panel1.Size = new System.Drawing.Size(336, 429);
             this.guna2Panel1.TabIndex = 2;
             // 
             // btnDangNhap
@@ -95,9 +96,10 @@
             this.btnDangNhap.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(542, 409);
+            this.btnDangNhap.Location = new System.Drawing.Point(482, 327);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(204, 53);
+            this.btnDangNhap.Size = new System.Drawing.Size(181, 42);
             this.btnDangNhap.TabIndex = 3;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -107,27 +109,27 @@
             this.lblDangNhap.AutoSize = true;
             this.lblDangNhap.BackColor = System.Drawing.Color.Transparent;
             this.lblDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDangNhap.Location = new System.Drawing.Point(485, 87);
+            this.lblDangNhap.Location = new System.Drawing.Point(431, 70);
             this.lblDangNhap.Name = "lblDangNhap";
-            this.lblDangNhap.Size = new System.Drawing.Size(330, 32);
+            this.lblDangNhap.Size = new System.Drawing.Size(281, 29);
             this.lblDangNhap.TabIndex = 5;
             this.lblDangNhap.Text = "Dịch vụ cho thuê xe hơi";
             // 
             // lblTenDangNhap
             // 
             this.lblTenDangNhap.AutoSize = true;
-            this.lblTenDangNhap.Location = new System.Drawing.Point(472, 175);
+            this.lblTenDangNhap.Location = new System.Drawing.Point(420, 140);
             this.lblTenDangNhap.Name = "lblTenDangNhap";
-            this.lblTenDangNhap.Size = new System.Drawing.Size(116, 20);
+            this.lblTenDangNhap.Size = new System.Drawing.Size(98, 16);
             this.lblTenDangNhap.TabIndex = 6;
             this.lblTenDangNhap.Text = "Tên đăng nhập";
             // 
             // lblMatKhau
             // 
             this.lblMatKhau.AutoSize = true;
-            this.lblMatKhau.Location = new System.Drawing.Point(472, 285);
+            this.lblMatKhau.Location = new System.Drawing.Point(420, 228);
             this.lblMatKhau.Name = "lblMatKhau";
-            this.lblMatKhau.Size = new System.Drawing.Size(75, 20);
+            this.lblMatKhau.Size = new System.Drawing.Size(61, 16);
             this.lblMatKhau.TabIndex = 7;
             this.lblMatKhau.Text = "Mật khẩu";
             // 
@@ -137,9 +139,10 @@
             this.btnThoat.FlatAppearance.BorderSize = 0;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(862, 12);
+            this.btnThoat.Location = new System.Drawing.Point(766, 10);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(34, 36);
+            this.btnThoat.Size = new System.Drawing.Size(30, 29);
             this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "✕";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -147,10 +150,10 @@
             // 
             // FDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(908, 536);
+            this.ClientSize = new System.Drawing.Size(807, 429);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.lblMatKhau);
             this.Controls.Add(this.lblTenDangNhap);
@@ -160,6 +163,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.tbTenDangNhap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
