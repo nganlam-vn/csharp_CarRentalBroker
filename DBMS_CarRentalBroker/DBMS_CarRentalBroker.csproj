@@ -81,11 +81,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dao\TaiKhoanDao.cs" />
-    <Compile Include="Views\Admin\ChiTietNguoiDung.cs">
+    <Compile Include="Views\Admin\FChiTietNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Admin\ChiTietNguoiDung.Designer.cs">
-      <DependentUpon>ChiTietNguoiDung.cs</DependentUpon>
+    <Compile Include="Views\Admin\FChiTietNguoiDung.Designer.cs">
+      <DependentUpon>FChiTietNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\FAdmin.cs">
       <SubType>Form</SubType>
@@ -354,8 +354,8 @@
     <EmbeddedResource Include="Views\ChuXe\FXeCuaToi.resx">
       <DependentUpon>FXeCuaToi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\ChiTietNguoiDung.resx">
-      <DependentUpon>ChiTietNguoiDung.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Admin\FChiTietNguoiDung.resx">
+      <DependentUpon>FChiTietNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FQuanLyNguoiDung.resx">
       <DependentUpon>FQuanLyNguoiDung.cs</DependentUpon>
