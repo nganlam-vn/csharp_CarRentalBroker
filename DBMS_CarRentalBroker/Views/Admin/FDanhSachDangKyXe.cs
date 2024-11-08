@@ -33,11 +33,8 @@ namespace DBMS_CarRentalBroker.Views.Admin
             SqlConnection conn = db.layKetNoi();
             using (conn)
             {
-                string query = "SELECT * FROM v_XeDangChoDuyet";
-
-                DataTable dataTable = new DataTable();
-                dataTable = db.thucThiDataTable(query);
-                gvChoDuyet.DataSource = dataTable;
+                string query = "SELECT * FROM v_XeDangChoDuyet"; 
+                gvChoDuyet.DataSource = db.thucThiDataTable(query);
             }
         }
 
@@ -47,10 +44,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             SqlConnection conn = db.layKetNoi();
             using (conn) { 
                 string query = "SELECT * FROM v_XeTuChoi";
-                
-                DataTable dataTable = new DataTable();
-                dataTable = db.thucThiDataTable(query);
-                gvTuChoi.DataSource = dataTable;
+                gvTuChoi.DataSource = db.thucThiDataTable(query);
             }
         }
 
@@ -109,9 +103,9 @@ namespace DBMS_CarRentalBroker.Views.Admin
                     DataGridViewRow selectedRow = gvChoDuyet.Rows[e.RowIndex];
                     int idXe = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
                     selectedXeId = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
-                    //FChiTietXe fChiTietXe = new FChiTietXe(idXe);
-                    //fChiTietXe.Show();
-                    MessageBox.Show("Xe đã chọn: " + idXe);
+                    FChiTietXe fChiTietXe = new FChiTietXe(idXe);
+                    fChiTietXe.Show();
+                    //MessageBox.Show("Xe đã chọn: " + idXe);
 
 
                 }
@@ -125,8 +119,6 @@ namespace DBMS_CarRentalBroker.Views.Admin
             {
                 MessageBox.Show(exc.Message);
             }
-            
-
 
         }
 
@@ -142,9 +134,9 @@ namespace DBMS_CarRentalBroker.Views.Admin
                     DataGridViewRow selectedRow = gvTuChoi.Rows[e.RowIndex];
                     int idXe = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
                    
-                    //FChiTietXe fChiTietXe = new FChiTietXe(idXe);
-                    //fChiTietXe.Show();
-                    MessageBox.Show("Xe đã chọn: " + idXe);
+                    FChiTietXe fChiTietXe = new FChiTietXe(idXe);
+                    fChiTietXe.Show();
+                    //MessageBox.Show("Xe đã chọn: " + idXe);
 
 
                 }
@@ -180,7 +172,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
                             command.CommandType = CommandType.StoredProcedure;
                             command.Parameters.AddWithValue("@MaXe", selectedXeId);
                             command.ExecuteNonQuery(); //executeNonQuery thực hiện câu lệnh sql như insert, update, delete
-                            MessageBox.Show("Xe đã được duyệt.");
+                            MessageBox.Show("Xe đã được duyệt và đang chờ thanh toán");
                             XeChoDuyet_Load();
                             XeTuChoi_Load();
 

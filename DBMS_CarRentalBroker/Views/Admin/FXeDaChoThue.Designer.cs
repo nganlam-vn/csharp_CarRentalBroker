@@ -37,20 +37,21 @@
             // 
             this.gvXeDaThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvXeDaThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvXeDaThue.Location = new System.Drawing.Point(136, 168);
+            this.gvXeDaThue.Location = new System.Drawing.Point(2, 76);
             this.gvXeDaThue.Name = "gvXeDaThue";
             this.gvXeDaThue.RowHeadersWidth = 62;
             this.gvXeDaThue.RowTemplate.Height = 28;
-            this.gvXeDaThue.Size = new System.Drawing.Size(801, 391);
+            this.gvXeDaThue.Size = new System.Drawing.Size(704, 391);
             this.gvXeDaThue.TabIndex = 0;
             this.gvXeDaThue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvXeChuaDuocThue_CellClick);
+            
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(184, 116);
+            this.label1.Location = new System.Drawing.Point(-6, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(723, 46);
             this.label1.TabIndex = 1;
@@ -60,7 +61,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 635);
+            this.ClientSize = new System.Drawing.Size(792, 524);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gvXeDaThue);
             this.Name = "FXeDaChoThue";

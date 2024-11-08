@@ -93,6 +93,18 @@
     <Compile Include="Views\Admin\FAdmin.Designer.cs">
       <DependentUpon>FAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\FChiTietPhiBaiDang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FChiTietPhiBaiDang.Designer.cs">
+      <DependentUpon>FChiTietPhiBaiDang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FXeChoThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FXeChoThanhToan.Designer.cs">
+      <DependentUpon>FXeChoThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ChuXe\FChinhSuaXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +294,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Admin\FChiTietPhiBaiDang.resx">
+      <DependentUpon>FChiTietPhiBaiDang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FXeChoThanhToan.resx">
+      <DependentUpon>FXeChoThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NguoiThue\FChiTietXe.resx">
       <DependentUpon>FChiTietXe.cs</DependentUpon>
     </EmbeddedResource>
