@@ -30,8 +30,10 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("p_XeChoThue", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                // Sử dụng truy vấn trực tiếp để lấy dữ liệu từ VIEW
+                string query = "SELECT * FROM v_XeChoThue";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.Text; // Đặt CommandType là Text vì đang sử dụng VIEW
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable dataTable = new DataTable();
@@ -44,16 +46,16 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
             }
         }
 
-
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             string searchText = txtTimKiem.Text.Trim();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
+                // Truy vấn sử dụng function `func_TimKiemXe`
                 string query = "SELECT * FROM func_TimKiemXe(@SearchTerm)";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.CommandType = CommandType.Text;
+                command.CommandType = CommandType.Text; // Đặt CommandType là Text vì đang sử dụng FUNCTION
                 command.Parameters.AddWithValue("@SearchTerm", searchText);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -66,6 +68,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                 dgvXeChoThue.DataSource = dataTable;
             }
         }
+
 
         private void btnLoc_Click(object sender, EventArgs e)
         {
@@ -115,7 +118,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                SqlCommand cmd = new SqlCommand("p_LocXe", conn);
+                SqlCommand cmd = new SqlCommand("p_LocXeTheoBoLoc", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@GiaList", (object)giaListStr ?? DBNull.Value);
@@ -132,7 +135,6 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                 dgvXeChoThue.DataSource = dt;
             }
 
-            // Ẩn pnlLoc
             pnlLoc.Visible = false;
             if (currentFormchild != null)
             {

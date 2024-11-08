@@ -48,8 +48,9 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("p_LayChiTietXe", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                string query = "SELECT * FROM func_LayChiTietXe(@MaXe)";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.CommandType = CommandType.Text;
                 command.Parameters.AddWithValue("@MaXe", maXe);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -65,5 +66,6 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                 return null;
             }
         }
+
     }
 }
