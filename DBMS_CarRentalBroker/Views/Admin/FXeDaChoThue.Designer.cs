@@ -44,7 +44,6 @@
             this.gvXeDaThue.Size = new System.Drawing.Size(704, 391);
             this.gvXeDaThue.TabIndex = 0;
             this.gvXeDaThue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvXeChuaDuocThue_CellClick);
-            
             // 
             // label1
             // 
@@ -53,9 +52,9 @@
             this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(-6, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(723, 46);
+            this.label1.Size = new System.Drawing.Size(725, 46);
             this.label1.TabIndex = 1;
-            this.label1.Text = "DANH SÁCH XE CHƯA ĐƯỢC THUÊ";
+            this.label1.Text = "DANH SÁCH XE ĐANG ĐƯỢC THUÊ";
             // 
             // FXeDaChoThue
             // 

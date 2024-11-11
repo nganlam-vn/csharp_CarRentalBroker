@@ -399,6 +399,9 @@
   <ItemGroup>
     <Content Include="bin\Debug\DBMS_CarRentalBroker.exe" />
     <Content Include="bin\Debug\DBMS_CarRentalBroker.pdb" />
+    <Content Include="imgs\download.jpg" />
+    <Content Include="imgs\ferrari499.jpg" />
+    <Content Include="imgs\vinfast8.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

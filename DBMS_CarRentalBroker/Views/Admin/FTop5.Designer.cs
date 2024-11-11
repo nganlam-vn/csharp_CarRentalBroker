@@ -42,9 +42,10 @@
             this.dgTop5.Name = "dgTop5";
             this.dgTop5.RowHeadersWidth = 62;
             this.dgTop5.RowTemplate.Height = 28;
-            this.dgTop5.Size = new System.Drawing.Size(686, 230);
+            this.dgTop5.Size = new System.Drawing.Size(686, 214);
             this.dgTop5.TabIndex = 0;
             this.dgTop5.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTop5_CellClick);
+           
             // 
             // label1
             // 

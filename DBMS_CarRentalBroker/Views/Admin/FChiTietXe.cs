@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,6 +52,10 @@ namespace DBMS_CarRentalBroker.Views.Admin
                         lbThang.Text = dtXe.Rows[0]["TheoThang"].ToString();
                         lbNgay.Text = dtXe.Rows[0]["TheoNgay"].ToString();
                         lbGio.Text = dtXe.Rows[0]["TheoGio"].ToString();
+                        // Giả sử tên file ảnh được lấy từ cột "HinhAnh"
+                        string relativePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "imgs", dtXe.Rows[0]["HinhAnh"].ToString());
+                        pbXe.ImageLocation = relativePath;
+
 
                     }
                     else

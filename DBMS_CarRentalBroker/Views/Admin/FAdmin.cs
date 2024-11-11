@@ -17,6 +17,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
         public FAdmin()
         {
             InitializeComponent();
+            OpenChildForm(new FDanhSachXe());
         }
 
         private void OpenChildForm(Form childForm)
