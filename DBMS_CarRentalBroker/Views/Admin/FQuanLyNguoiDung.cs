@@ -82,9 +82,9 @@ namespace DBMS_CarRentalBroker.Views.Admin
             nguoiDungDao.timKiemNguoiDung(dgvNguoiDung, tbTimKiem.Text);
         }
 
-        private void FQuanLyNguoiDung_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            taiKhoanDao.dangXuat();
-        }
+        //private void FQuanLyNguoiDung_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    taiKhoanDao.dangXuat();
+        //}
     }
 }
