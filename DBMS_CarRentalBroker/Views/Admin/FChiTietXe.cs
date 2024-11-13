@@ -52,17 +52,24 @@ namespace DBMS_CarRentalBroker.Views.Admin
                         lbThang.Text = dtXe.Rows[0]["TheoThang"].ToString();
                         lbNgay.Text = dtXe.Rows[0]["TheoNgay"].ToString();
                         lbGio.Text = dtXe.Rows[0]["TheoGio"].ToString();
-                        // Giả sử tên file ảnh được lấy từ cột "HinhAnh"
-                        string relativePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "imgs", dtXe.Rows[0]["HinhAnh"].ToString());
-                        pbXe.ImageLocation = relativePath;
+                        string projectPath = Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName;
+                        string imagePath = Path.Combine(projectPath, "imgs", dtXe.Rows[0]["HinhAnh"].ToString());
+
+                        // In đường dẫn ra để kiểm tra
+                        Console.WriteLine("Image Path: " + imagePath);
+
+                        if (File.Exists(imagePath))
+                        {
+                            pbXe.Image = Image.FromFile(imagePath);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hình ảnh không tồn tại trong thư mục imgs. Đường dẫn: " + imagePath);
+                        }
 
 
                     }
-                    else
-                    {
-                        lbTenXe.Text = "Không tìm thấy xe với mã đã cho.";
-                    }
-
+                 
                 }
             }
             catch (Exception ex)
