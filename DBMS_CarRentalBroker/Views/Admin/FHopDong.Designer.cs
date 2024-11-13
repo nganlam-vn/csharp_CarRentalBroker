@@ -1,6 +1,6 @@
 ﻿namespace DBMS_CarRentalBroker.Views.Admin
 {
-    partial class FXeDaChoThue
+    partial class FHopDong
     {
         /// <summary>
         /// Required designer variable.
@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gvXeDaThue = new System.Windows.Forms.DataGridView();
+            this.gvHopDong = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.gvXeDaThue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvHopDong)).BeginInit();
             this.SuspendLayout();
             // 
-            // gvXeDaThue
+            // gvHopDong
             // 
-            this.gvXeDaThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gvXeDaThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvXeDaThue.Location = new System.Drawing.Point(2, 76);
-            this.gvXeDaThue.Name = "gvXeDaThue";
-            this.gvXeDaThue.RowHeadersWidth = 62;
-            this.gvXeDaThue.RowTemplate.Height = 28;
-            this.gvXeDaThue.Size = new System.Drawing.Size(704, 391);
-            this.gvXeDaThue.TabIndex = 0;
-            this.gvXeDaThue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvXeChuaDuocThue_CellClick);
+            this.gvHopDong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvHopDong.Location = new System.Drawing.Point(1, 116);
+            this.gvHopDong.Name = "gvHopDong";
+            this.gvHopDong.RowHeadersWidth = 62;
+            this.gvHopDong.RowTemplate.Height = 28;
+            this.gvHopDong.Size = new System.Drawing.Size(950, 335);
+            this.gvHopDong.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(-6, 9);
+            this.label1.Location = new System.Drawing.Point(186, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(725, 46);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "DANH SÁCH XE ĐANG ĐƯỢC THUÊ";
+            this.label1.Size = new System.Drawing.Size(604, 46);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "DANH SÁCH CÁC HỢP ĐỒNG";
             // 
-            // FXeDaChoThue
+            // FHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 524);
+            this.ClientSize = new System.Drawing.Size(969, 450);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gvXeDaThue);
-            this.Name = "FXeDaChoThue";
-            this.Text = "FXeChuaDuocThue";
-            this.Load += new System.EventHandler(this.FXeDaChoThue_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvXeDaThue)).EndInit();
+            this.Controls.Add(this.gvHopDong);
+            this.Name = "FHopDong";
+            this.Text = "FHopDong";
+            this.Load += new System.EventHandler(this.FHopDong_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gvHopDong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView gvXeDaThue;
+
+        private System.Windows.Forms.DataGridView gvHopDong;
         private System.Windows.Forms.Label label1;
     }
 }

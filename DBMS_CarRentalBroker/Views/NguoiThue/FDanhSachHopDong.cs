@@ -1,4 +1,5 @@
-﻿using DBMS_CarRentalBroker.Dao;
+﻿using DBMS_CarRentalBroker.Common;
+using DBMS_CarRentalBroker.Dao;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
         public DBConnection dbConn = new DBConnection();
         DataTable dsHopDongConNo = new DataTable();
         string query = "";
-        int userId = 3;
+        int userId = Global.MaND;
 
         public FDanhSachHopDong()
         {

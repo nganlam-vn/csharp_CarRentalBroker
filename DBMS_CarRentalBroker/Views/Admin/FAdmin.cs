@@ -17,6 +17,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
         public FAdmin()
         {
             InitializeComponent();
+            OpenChildForm(new FDanhSachXe());
         }
 
         private void OpenChildForm(Form childForm)
@@ -64,7 +65,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             OpenChildForm(fTop5);
         }
 
-        private void btnHopDong_Click(object sender, EventArgs e)
+        private void btnKhoanThanhToan_Click(object sender, EventArgs e)
         {
             FDanhSachHopDong fDanhSachHopDong = new FDanhSachHopDong();
             OpenChildForm(fDanhSachHopDong);
@@ -81,6 +82,19 @@ namespace DBMS_CarRentalBroker.Views.Admin
         {
            FXeChoThanhToan fXeChoThanhToan = new FXeChoThanhToan();
             OpenChildForm(fXeChoThanhToan); 
+        }
+
+        private void btnQuanLyNguoiDung_Click(object sender, EventArgs e)
+        {
+            FQuanLyNguoiDung fQuanLyNguoiDung = new FQuanLyNguoiDung();
+            OpenChildForm(fQuanLyNguoiDung);
+        }
+
+        private void btnDSHopDong_Click(object sender, EventArgs e)
+        {
+            FHopDong fHopDong = new FHopDong();
+            OpenChildForm(fHopDong);
+
         }
     }
 }

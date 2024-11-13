@@ -99,6 +99,12 @@
     <Compile Include="Views\Admin\FChiTietPhiBaiDang.Designer.cs">
       <DependentUpon>FChiTietPhiBaiDang.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Admin\FHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FHopDong.Designer.cs">
+      <DependentUpon>FHopDong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\FXeChoThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     <EmbeddedResource Include="Views\Admin\FChiTietPhiBaiDang.resx">
       <DependentUpon>FChiTietPhiBaiDang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FHopDong.resx">
+      <DependentUpon>FHopDong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FXeChoThanhToan.resx">
       <DependentUpon>FXeChoThanhToan.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,6 +408,9 @@
   <ItemGroup>
     <Content Include="bin\Debug\DBMS_CarRentalBroker.exe" />
     <Content Include="bin\Debug\DBMS_CarRentalBroker.pdb" />
+    <Content Include="imgs\download.jpg" />
+    <Content Include="imgs\ferrari499.jpg" />
+    <Content Include="imgs\vinfast8.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

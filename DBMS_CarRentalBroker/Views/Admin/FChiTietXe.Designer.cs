@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChiTietXe));
             this.lbTenXe = new System.Windows.Forms.Label();
             this.lbThuongHieu = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pbXe = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbGio = new System.Windows.Forms.Label();
@@ -55,7 +56,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.lbThang = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXe)).BeginInit();
             this.SuspendLayout();
             // 
             // lbTenXe
@@ -77,14 +78,16 @@
             this.lbThuongHieu.TabIndex = 1;
             this.lbThuongHieu.Text = "txt";
             // 
-            // guna2PictureBox1
+            // pbXe
             // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(503, 46);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(368, 305);
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
+            this.pbXe.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbXe.ErrorImage")));
+            this.pbXe.ImageRotate = 0F;
+            this.pbXe.Location = new System.Drawing.Point(488, 46);
+            this.pbXe.Name = "pbXe";
+            this.pbXe.Size = new System.Drawing.Size(383, 305);
+            this.pbXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbXe.TabIndex = 2;
+            this.pbXe.TabStop = false;
             // 
             // label1
             // 
@@ -359,12 +362,12 @@
             this.Controls.Add(this.lbGio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.pbXe);
             this.Controls.Add(this.lbThuongHieu);
             this.Controls.Add(this.lbTenXe);
             this.Name = "FChiTietXe";
             this.Text = "FChiTietXe";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,7 +377,7 @@
 
         private System.Windows.Forms.Label lbTenXe;
         private System.Windows.Forms.Label lbThuongHieu;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pbXe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbGio;

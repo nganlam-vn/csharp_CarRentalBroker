@@ -17,7 +17,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
     {
         private string connectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=CarRentalBroker;Integrated Security=True;Encrypt=False;";
         //int maND = Global.maND;
-        int maND = 2;
+        int maND = Global.MaND;
         private Form currentFormchild;
 
         public FChuXeTrangChu()

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtgvCarList = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -44,32 +44,32 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(643, 60);
+            this.textBox1.Location = new System.Drawing.Point(660, 60);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 27);
+            this.textBox1.Size = new System.Drawing.Size(176, 37);
             this.textBox1.TabIndex = 12;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(554, 63);
+            this.label9.Location = new System.Drawing.Point(532, 62);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 18);
+            this.label9.Size = new System.Drawing.Size(122, 29);
             this.label9.TabIndex = 11;
             this.label9.Text = "Tìm kiếm";
             // 
             // dtgvCarList
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.dtgvCarList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCarList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.dtgvCarList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvCarList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvCarList.ColumnHeadersHeight = 30;
             this.dtgvCarList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtgvCarList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -77,20 +77,21 @@
             this.SoGhe,
             this.Mau,
             this.ThuongHieu});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvCarList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvCarList.DefaultCellStyle = dataGridViewCellStyle6;
             this.dtgvCarList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dtgvCarList.Location = new System.Drawing.Point(12, 103);
             this.dtgvCarList.Name = "dtgvCarList";
             this.dtgvCarList.ReadOnly = true;
             this.dtgvCarList.RowHeadersVisible = false;
-            this.dtgvCarList.Size = new System.Drawing.Size(807, 346);
+            this.dtgvCarList.RowHeadersWidth = 62;
+            this.dtgvCarList.Size = new System.Drawing.Size(857, 346);
             this.dtgvCarList.TabIndex = 10;
             this.dtgvCarList.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Teal;
             this.dtgvCarList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -120,6 +121,7 @@
             // 
             this.TenXe.DataPropertyName = "TenXe";
             this.TenXe.HeaderText = "TenXe";
+            this.TenXe.MinimumWidth = 8;
             this.TenXe.Name = "TenXe";
             this.TenXe.ReadOnly = true;
             // 
@@ -127,6 +129,7 @@
             // 
             this.SoGhe.DataPropertyName = "SoGhe";
             this.SoGhe.HeaderText = "SoGhe";
+            this.SoGhe.MinimumWidth = 8;
             this.SoGhe.Name = "SoGhe";
             this.SoGhe.ReadOnly = true;
             // 
@@ -134,6 +137,7 @@
             // 
             this.Mau.DataPropertyName = "Mau";
             this.Mau.HeaderText = "Mau";
+            this.Mau.MinimumWidth = 8;
             this.Mau.Name = "Mau";
             this.Mau.ReadOnly = true;
             // 
@@ -141,6 +145,7 @@
             // 
             this.ThuongHieu.DataPropertyName = "ThuongHieu";
             this.ThuongHieu.HeaderText = "ThuongHieu";
+            this.ThuongHieu.MinimumWidth = 8;
             this.ThuongHieu.Name = "ThuongHieu";
             this.ThuongHieu.ReadOnly = true;
             // 
@@ -152,16 +157,16 @@
             this.label1.Location = new System.Drawing.Point(260, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 24);
+            this.label1.Size = new System.Drawing.Size(323, 32);
             this.label1.TabIndex = 9;
             this.label1.Text = "Danh sách xe cho thuê";
             // 
             // FDanhSachXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(840, 467);
+            this.ClientSize = new System.Drawing.Size(926, 467);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dtgvCarList);
