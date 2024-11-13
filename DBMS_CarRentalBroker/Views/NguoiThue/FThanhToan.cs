@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMS_CarRentalBroker.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
     {
         public DBConnection dbConn = new DBConnection();
         public DataRow CarContractRow { get; set; }
-        public int userId = 3;
+        public int userId = Global.MaND;
         public int maHD;
 
         public FThanhToan()
@@ -58,7 +59,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
 
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
-            int maNguoiGui = 3;
+            int maNguoiGui = Global.MaND;
             int maNguoiNhan = getIdAdmin();
             int maHD = int.Parse(CarContractRow["MaHopdong"].ToString());
             float soTien = float.Parse(txtSoTien.Text);
@@ -126,6 +127,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
 
                     reader.Close();
                 }
+
             }
             catch (Exception ex)
             {
