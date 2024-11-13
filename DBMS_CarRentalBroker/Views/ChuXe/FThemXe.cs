@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMS_CarRentalBroker.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
 {
     public partial class FThemXe : Form
     {
-        int maND = 2;
+        int maND = Global.MaND;
         String connectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=CarRentalBroker;Integrated Security=True;Encrypt=False;";
 
         public FThemXe()

@@ -1,4 +1,5 @@
-﻿using DBMS_CarRentalBroker.Models;
+﻿using DBMS_CarRentalBroker.Common;
+using DBMS_CarRentalBroker.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
 {
     public partial class FXeCuaToi : Form
     {
-        int maND = 2;
+        int maND = Global.MaND;
         String connectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=CarRentalBroker;Integrated Security=True;Encrypt=False;";
 
         public FXeCuaToi()
