@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DBMS_CarRentalBroker.Views.Admin
 {
-    public partial class ChiTietNguoiDung : Form
+    public partial class FChiTietPhiBaiDang : Form
     {
-        public ChiTietNguoiDung()
+        public FChiTietPhiBaiDang()
         {
             InitializeComponent();
         }

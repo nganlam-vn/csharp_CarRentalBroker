@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
         public FChiTietXe(int idXe)
         {
             InitializeComponent();
+            FChiTietXe_Load(idXe);
         }
 
         private void FChiTietXe_Load(int idXe)
@@ -26,28 +28,42 @@ namespace DBMS_CarRentalBroker.Views.Admin
             conn.Open();
             try
             {
-                string sqlStr = string.Format("SELECT * FROM Xe WHERE MaXe = {0}", idXe);
-
-                DataTable dtXe = new DataTable();
-                dtXe = db.thucThiDataTable(sqlStr);
-                if (dtXe.Rows.Count > 0)
+                using (SqlCommand command = new SqlCommand("pro_LayChiTietXe", conn))
                 {
-                    // Lấy dữ liệu từ cột "Ten" của hàng đầu tiên
-                    lbTenXe.Text = dtXe.Rows[0]["Ten"].ToString(); // "Ten" là tên cột chứa dữ liệu
-                    lbThuongHieu.Text = dtXe.Rows[0]["ThuongHieu"].ToString();
-                    lbNamSanXuat.Text = dtXe.Rows[0]["NamSanXuat"].ToString();
-                    lbMauSac.Text = dtXe.Rows[0]["Mau"].ToString();
-                    lbSoGhe.Text = dtXe.Rows[0]["SoGhe"].ToString();
-                    lbPhanKhoi.Text = dtXe.Rows[0]["PhanKhoi"].ToString();
-                    lbTrangThai.Text = dtXe.Rows[0]["TrangThai"].ToString();
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@MaXe", idXe);
+                    command.ExecuteNonQuery();
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dtXe = new DataTable();
+                    adapter.Fill(dtXe);
+                    
+                    if (dtXe.Rows.Count > 0)
+                    {
+                        // Lấy dữ liệu từ cột "Ten" của hàng đầu tiên
+                        lbTenXe.Text = dtXe.Rows[0]["Ten"].ToString(); // "Ten" là tên cột chứa dữ liệu
+                        lbThuongHieu.Text = dtXe.Rows[0]["ThuongHieu"].ToString();
+                        lbNamSanXuat.Text = dtXe.Rows[0]["NamSanXuat"].ToString();
+                        lbMauSac.Text = dtXe.Rows[0]["Mau"].ToString();
+                        lbSoGhe.Text = dtXe.Rows[0]["SoGhe"].ToString();
+                        lbPhanKhoi.Text = dtXe.Rows[0]["PhanKhoi"].ToString();
+                        lbTrangThai.Text = dtXe.Rows[0]["TrangThai"].ToString();
+                        lbSoSan.Text = dtXe.Rows[0]["LaXeSoSan"].ToString();
+                        lbXeDien.Text = dtXe.Rows[0]["LaXeDien"].ToString();
+                        lbThang.Text = dtXe.Rows[0]["TheoThang"].ToString();
+                        lbNgay.Text = dtXe.Rows[0]["TheoNgay"].ToString();
+                        lbGio.Text = dtXe.Rows[0]["TheoGio"].ToString();
+                        // Giả sử tên file ảnh được lấy từ cột "HinhAnh"
+                        string relativePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "imgs", dtXe.Rows[0]["HinhAnh"].ToString());
+                        pbXe.ImageLocation = relativePath;
+
+
+                    }
+                    else
+                    {
+                        lbTenXe.Text = "Không tìm thấy xe với mã đã cho.";
+                    }
 
                 }
-                else
-                {
-                    lbTenXe.Text = "Không tìm thấy xe với mã đã cho.";
-                }
-
-        
             }
             catch (Exception ex)
             {

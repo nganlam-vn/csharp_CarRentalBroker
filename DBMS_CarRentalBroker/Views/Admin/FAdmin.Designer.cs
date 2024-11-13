@@ -45,9 +45,9 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.btnBestSeller);
             this.guna2ShadowPanel1.Controls.Add(this.btnThanhToan);
             this.guna2ShadowPanel1.Controls.Add(this.btnXeTrenSan);
-            this.guna2ShadowPanel1.Controls.Add(this.btnBestSeller);
             this.guna2ShadowPanel1.Controls.Add(this.btnLsGiaoDich);
             this.guna2ShadowPanel1.Controls.Add(this.btnHopDong);
             this.guna2ShadowPanel1.Controls.Add(this.btnGiaHan);
@@ -71,11 +71,12 @@
             this.btnThanhToan.FillColor = System.Drawing.Color.Teal;
             this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(3, 460);
+            this.btnThanhToan.Location = new System.Drawing.Point(3, 263);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(231, 69);
             this.btnThanhToan.TabIndex = 5;
-            this.btnThanhToan.Text = "Các khoản thanh toán";
+            this.btnThanhToan.Text = "Xe chờ thanh toán";
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnXeTrenSan
             // 
@@ -106,7 +107,7 @@
             this.btnBestSeller.FillColor = System.Drawing.Color.Teal;
             this.btnBestSeller.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBestSeller.ForeColor = System.Drawing.Color.White;
-            this.btnBestSeller.Location = new System.Drawing.Point(3, 263);
+            this.btnBestSeller.Location = new System.Drawing.Point(3, 332);
             this.btnBestSeller.Name = "btnBestSeller";
             this.btnBestSeller.Size = new System.Drawing.Size(231, 69);
             this.btnBestSeller.TabIndex = 5;
@@ -125,7 +126,7 @@
             this.btnLsGiaoDich.FillColor = System.Drawing.Color.Teal;
             this.btnLsGiaoDich.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLsGiaoDich.ForeColor = System.Drawing.Color.White;
-            this.btnLsGiaoDich.Location = new System.Drawing.Point(3, 395);
+            this.btnLsGiaoDich.Location = new System.Drawing.Point(3, 463);
             this.btnLsGiaoDich.Name = "btnLsGiaoDich";
             this.btnLsGiaoDich.Size = new System.Drawing.Size(231, 69);
             this.btnLsGiaoDich.TabIndex = 4;
@@ -142,7 +143,7 @@
             this.btnHopDong.FillColor = System.Drawing.Color.Teal;
             this.btnHopDong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHopDong.ForeColor = System.Drawing.Color.White;
-            this.btnHopDong.Location = new System.Drawing.Point(3, 329);
+            this.btnHopDong.Location = new System.Drawing.Point(3, 397);
             this.btnHopDong.Name = "btnHopDong";
             this.btnHopDong.Size = new System.Drawing.Size(231, 69);
             this.btnHopDong.TabIndex = 3;
@@ -215,9 +216,10 @@
             // 
             // pnContent
             // 
-            this.pnContent.Location = new System.Drawing.Point(238, 106);
+            this.pnContent.AutoScroll = true;
+            this.pnContent.Location = new System.Drawing.Point(269, 131);
             this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(915, 515);
+            this.pnContent.Size = new System.Drawing.Size(811, 487);
             this.pnContent.TabIndex = 4;
             // 
             // FAdmin

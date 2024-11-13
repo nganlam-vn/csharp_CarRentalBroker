@@ -35,5 +35,10 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
             txtPhanKhoi.Text = xe.PhanKhoi.ToString();
             txtThuongHieu.Text = xe.ThuongHieu;
         }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

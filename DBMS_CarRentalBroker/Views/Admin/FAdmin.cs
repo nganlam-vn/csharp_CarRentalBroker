@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMS_CarRentalBroker.Views.NguoiThue;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,10 +17,12 @@ namespace DBMS_CarRentalBroker.Views.Admin
         public FAdmin()
         {
             InitializeComponent();
+            OpenChildForm(new FDanhSachXe());
         }
 
         private void OpenChildForm(Form childForm)
         {
+
             if (currentFormchild != null)
             {
                 currentFormchild.Close();
@@ -27,6 +30,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             currentFormchild = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.AutoScroll = true;
             childForm.Dock = DockStyle.Fill;
             pnContent.Controls.Add(childForm);
             pnContent.Tag = childForm;
@@ -37,6 +41,8 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void btnXeTrenSan_Click(object sender, EventArgs e)
         {
+            FDanhSachXe fXeTrenSan = new FDanhSachXe();
+            OpenChildForm(fXeTrenSan);
 
         }
 
@@ -61,6 +67,8 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void btnHopDong_Click(object sender, EventArgs e)
         {
+            FDanhSachHopDong fDanhSachHopDong = new FDanhSachHopDong();
+            OpenChildForm(fDanhSachHopDong);
 
         }
 
@@ -68,6 +76,12 @@ namespace DBMS_CarRentalBroker.Views.Admin
         {
             FDanhSachDangKyXe fDanhSachDangKyXe = new FDanhSachDangKyXe();
             OpenChildForm(fDanhSachDangKyXe);
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+           FXeChoThanhToan fXeChoThanhToan = new FXeChoThanhToan();
+            OpenChildForm(fXeChoThanhToan); 
         }
     }
 }

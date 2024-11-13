@@ -43,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(267, 35);
+            this.label1.Location = new System.Drawing.Point(101, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(415, 27);
             this.label1.TabIndex = 1;
@@ -57,7 +57,7 @@
             this.gvChoDuyet.Name = "gvChoDuyet";
             this.gvChoDuyet.RowHeadersWidth = 62;
             this.gvChoDuyet.RowTemplate.Height = 28;
-            this.gvChoDuyet.Size = new System.Drawing.Size(923, 298);
+            this.gvChoDuyet.Size = new System.Drawing.Size(622, 290);
             this.gvChoDuyet.TabIndex = 0;
             this.gvChoDuyet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvChoDuyet_CellClick);
             // 
@@ -66,7 +66,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(267, 394);
+            this.label2.Location = new System.Drawing.Point(101, 488);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(335, 27);
             this.label2.TabIndex = 12;
@@ -76,11 +76,11 @@
             // 
             this.gvTuChoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvTuChoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTuChoi.Location = new System.Drawing.Point(2, 424);
+            this.gvTuChoi.Location = new System.Drawing.Point(2, 518);
             this.gvTuChoi.Name = "gvTuChoi";
             this.gvTuChoi.RowHeadersWidth = 62;
             this.gvTuChoi.RowTemplate.Height = 28;
-            this.gvTuChoi.Size = new System.Drawing.Size(923, 298);
+            this.gvTuChoi.Size = new System.Drawing.Size(622, 298);
             this.gvTuChoi.TabIndex = 13;
             this.gvTuChoi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTuChoi_CellClick);
             // 
@@ -94,9 +94,9 @@
             this.btnTuChoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnTuChoi.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTuChoi.ForeColor = System.Drawing.Color.White;
-            this.btnTuChoi.Location = new System.Drawing.Point(941, 124);
+            this.btnTuChoi.Location = new System.Drawing.Point(115, 383);
             this.btnTuChoi.Name = "btnTuChoi";
-            this.btnTuChoi.Size = new System.Drawing.Size(158, 45);
+            this.btnTuChoi.Size = new System.Drawing.Size(132, 45);
             this.btnTuChoi.TabIndex = 14;
             this.btnTuChoi.Text = "Từ chối";
             this.btnTuChoi.Click += new System.EventHandler(this.btnTuChoi_Click);
@@ -111,9 +111,9 @@
             this.btnDuyet.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnDuyet.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuyet.ForeColor = System.Drawing.Color.White;
-            this.btnDuyet.Location = new System.Drawing.Point(941, 209);
+            this.btnDuyet.Location = new System.Drawing.Point(384, 383);
             this.btnDuyet.Name = "btnDuyet";
-            this.btnDuyet.Size = new System.Drawing.Size(158, 45);
+            this.btnDuyet.Size = new System.Drawing.Size(132, 45);
             this.btnDuyet.TabIndex = 15;
             this.btnDuyet.Text = "Duyệt";
             this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 731);
+            this.ClientSize = new System.Drawing.Size(792, 816);
             this.Controls.Add(this.btnDuyet);
             this.Controls.Add(this.btnTuChoi);
             this.Controls.Add(this.gvTuChoi);

@@ -36,20 +36,23 @@
             // dgTop5
             // 
             this.dgTop5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgTop5.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgTop5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgTop5.Location = new System.Drawing.Point(32, 66);
+            this.dgTop5.Location = new System.Drawing.Point(12, 66);
             this.dgTop5.Name = "dgTop5";
             this.dgTop5.RowHeadersWidth = 62;
             this.dgTop5.RowTemplate.Height = 28;
-            this.dgTop5.Size = new System.Drawing.Size(1132, 385);
+            this.dgTop5.Size = new System.Drawing.Size(686, 214);
             this.dgTop5.TabIndex = 0;
+            this.dgTop5.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgTop5_CellClick);
+           
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(353, 26);
+            this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(595, 37);
             this.label1.TabIndex = 1;
@@ -59,7 +62,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 450);
+            this.ClientSize = new System.Drawing.Size(792, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgTop5);
             this.Name = "FTop5";
