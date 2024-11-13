@@ -35,6 +35,9 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                 string mau = txtMau.Text;
                 int phanKhoi = int.Parse(txtPhanKhoi.Text);
                 string thuongHieu = txtThuongHieu.Text;
+                float giaTheoGio = float.Parse(txtGiaTheoGio.Text);
+                float giaTheoNgay = float.Parse(txtGiaTheoNgay.Text);
+                float giaTheoThang = float.Parse(txtGiaTheoThang.Text);
 
                 // Chỉ cần truyền các tham số cần thiết cho p_ThemXe
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -53,7 +56,9 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                     command.Parameters.AddWithValue("@ThuongHieu", thuongHieu);
                     command.Parameters.AddWithValue("@TrangThai", "Chờ duyệt"); // Nếu có cần thiết
                     command.Parameters.AddWithValue("@MaChuXe", maND); // Mã người dùng hiện tại
-
+                    command.Parameters.AddWithValue("@GiaTheoGio", giaTheoGio);
+                    command.Parameters.AddWithValue("@GiaTheoNgay", giaTheoNgay);
+                    command.Parameters.AddWithValue("@GiaTheoThang", giaTheoThang);
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();

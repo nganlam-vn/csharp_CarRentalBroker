@@ -63,7 +63,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
             int maNguoiNhan = getIdAdmin();
             int maHD = int.Parse(CarContractRow["MaHopdong"].ToString());
             float soTien = float.Parse(txtSoTien.Text);
-            string noiDung = txtSoTien.Text;
+            string noiDung = txtNoiDung.Text;
 
             try
             {
