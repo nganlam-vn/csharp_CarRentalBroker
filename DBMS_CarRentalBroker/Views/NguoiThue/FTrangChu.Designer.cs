@@ -41,6 +41,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.lblLienKetVi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -49,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(191)))), ((int)(((byte)(158)))));
+            this.panel1.Controls.Add(this.lblLienKetVi);
             this.panel1.Controls.Add(this.lblLichSuGD);
             this.panel1.Controls.Add(this.lblLichSuThue);
             this.panel1.Controls.Add(this.lblThanhToan);
@@ -170,6 +172,17 @@
             this.pnlContent.Size = new System.Drawing.Size(838, 475);
             this.pnlContent.TabIndex = 6;
             // 
+            // lblLienKetVi
+            // 
+            this.lblLienKetVi.AutoSize = true;
+            this.lblLienKetVi.ForeColor = System.Drawing.Color.White;
+            this.lblLienKetVi.Location = new System.Drawing.Point(26, 382);
+            this.lblLienKetVi.Name = "lblLienKetVi";
+            this.lblLienKetVi.Size = new System.Drawing.Size(94, 18);
+            this.lblLienKetVi.TabIndex = 8;
+            this.lblLienKetVi.Text = "Liên kết ví";
+            this.lblLienKetVi.Click += new System.EventHandler(this.lblLienKetVi_Click);
+            // 
             // FTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -209,5 +222,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.Label lblLienKetVi;
     }
 }

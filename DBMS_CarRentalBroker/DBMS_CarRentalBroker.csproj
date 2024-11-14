@@ -402,6 +402,9 @@
     <EmbeddedResource Include="Views\NguoiThue\FLichSuThueXe.resx">
       <DependentUpon>FLichSuThueXe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NguoiThue\FTrangChu.resx">
+      <DependentUpon>FTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="bin\Debug\DBMS_CarRentalBroker.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
