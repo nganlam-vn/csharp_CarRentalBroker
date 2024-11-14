@@ -1,13 +1,17 @@
 ﻿using DBMS_CarRentalBroker.Dao;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace DBMS_CarRentalBroker.Views.NguoiThue
 {
     public partial class FDanhSachXe : Form
     {
         public NguoiThueDAO nguoiThueDao;
+        public DBConnection dbConn = new DBConnection();
+
 
         public FDanhSachXe()
         {
@@ -47,6 +51,29 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
         {
             DataTable carList = nguoiThueDao.getAllCar();
             dtgvCarList.DataSource = carList;
+        }
+
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtTimKiem.Text.Trim();
+            string query = "SELECT * FROM func_timKiemXeDaDuyet(@SearchTerm)";
+
+            using (SqlCommand command = new SqlCommand(query, dbConn.getConnection))
+            {
+
+                command.Parameters.AddWithValue("@SearchTerm", searchText);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+
+                dbConn.openConnection();
+                adapter.Fill(dataTable);
+                dbConn.closeConnection();
+
+                dtgvCarList.DataSource = dataTable;
+
+            }
         }
 
     }
