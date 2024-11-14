@@ -35,7 +35,7 @@
             this.lblThanhToan = new System.Windows.Forms.Label();
             this.lblTrangChu = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDangXuat = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblClose = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -107,21 +107,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.lblDangXuat);
             this.panel2.Location = new System.Drawing.Point(0, 491);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 53);
             this.panel2.TabIndex = 4;
             // 
-            // label3
+            // lblDangXuat
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Đăng xuất";
+            this.lblDangXuat.AutoSize = true;
+            this.lblDangXuat.ForeColor = System.Drawing.Color.White;
+            this.lblDangXuat.Location = new System.Drawing.Point(46, 17);
+            this.lblDangXuat.Name = "lblDangXuat";
+            this.lblDangXuat.Size = new System.Drawing.Size(92, 18);
+            this.lblDangXuat.TabIndex = 0;
+            this.lblDangXuat.Text = "Đăng xuất";
+            this.lblDangXuat.Click += new System.EventHandler(this.lblDangXuat_Click);
             // 
             // guna2Elipse1
             // 
@@ -200,7 +201,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label lblClose;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDangXuat;
         private System.Windows.Forms.Label lblTrangChu;
         private System.Windows.Forms.Label lblThanhToan;
         private System.Windows.Forms.Label lblLichSuGD;
