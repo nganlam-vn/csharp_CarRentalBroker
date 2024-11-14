@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtgvCarList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.TenXe = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,19 +42,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCarList)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(660, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 37);
-            this.textBox1.TabIndex = 12;
+            this.txtTimKiem.Location = new System.Drawing.Point(660, 60);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(176, 27);
+            this.txtTimKiem.TabIndex = 12;
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(532, 62);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 29);
+            this.label9.Size = new System.Drawing.Size(83, 18);
             this.label9.TabIndex = 11;
             this.label9.Text = "Tìm kiếm";
             // 
@@ -157,17 +158,17 @@
             this.label1.Location = new System.Drawing.Point(260, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 32);
+            this.label1.Size = new System.Drawing.Size(226, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "Danh sách xe cho thuê";
             // 
             // FDanhSachXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(926, 467);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dtgvCarList);
             this.Controls.Add(this.label1);
@@ -186,7 +187,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2DataGridView dtgvCarList;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenXe;

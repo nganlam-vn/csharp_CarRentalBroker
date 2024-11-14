@@ -62,5 +62,20 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
         {
             OpenChildForm(new FLichSuThueXe());
         }
+
+        private void lblDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+    
+            FDangNhap fDangNhap = new FDangNhap();
+            fDangNhap.ShowDialog(); 
+
+            Application.Exit();
+        }
+
+        private void lblLienKetVi_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FLienKetTKNganHang());
+        }
     }
 }

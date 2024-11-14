@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FChiTietXe));
             this.label15 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblClose = new System.Windows.Forms.Label();
@@ -66,7 +67,9 @@
             this.txtBienSo = new System.Windows.Forms.TextBox();
             this.txtNamSX = new System.Windows.Forms.TextBox();
             this.txtMau = new System.Windows.Forms.TextBox();
+            this.pbXe = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXe)).BeginInit();
             this.SuspendLayout();
             // 
             // label15
@@ -89,7 +92,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(732, 55);
+            this.panel3.Size = new System.Drawing.Size(787, 55);
             this.panel3.TabIndex = 221;
             // 
             // lblClose
@@ -118,7 +121,7 @@
             // btnBookCar
             // 
             this.btnBookCar.BackColor = System.Drawing.Color.Teal;
-            this.btnBookCar.Location = new System.Drawing.Point(350, 463);
+            this.btnBookCar.Location = new System.Drawing.Point(548, 525);
             this.btnBookCar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBookCar.Name = "btnBookCar";
             this.btnBookCar.Size = new System.Drawing.Size(118, 45);
@@ -131,7 +134,7 @@
             // 
             this.dtpTo.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(501, 368);
+            this.dtpTo.Location = new System.Drawing.Point(99, 522);
             this.dtpTo.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -143,7 +146,7 @@
             // 
             this.dtpFrom.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFrom.Location = new System.Drawing.Point(501, 327);
+            this.dtpFrom.Location = new System.Drawing.Point(99, 481);
             this.dtpFrom.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -154,7 +157,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(440, 373);
+            this.label13.Location = new System.Drawing.Point(38, 527);
             this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(40, 18);
@@ -164,7 +167,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(440, 333);
+            this.label12.Location = new System.Drawing.Point(38, 487);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 18);
@@ -174,7 +177,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(425, 287);
+            this.label11.Location = new System.Drawing.Point(23, 441);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(181, 18);
@@ -287,7 +290,7 @@
             // 
             // txtChuXe
             // 
-            this.txtChuXe.Location = new System.Drawing.Point(501, 216);
+            this.txtChuXe.Location = new System.Drawing.Point(588, 216);
             this.txtChuXe.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtChuXe.Name = "txtChuXe";
             this.txtChuXe.Size = new System.Drawing.Size(174, 27);
@@ -296,7 +299,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(384, 78);
+            this.label6.Location = new System.Drawing.Point(471, 78);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 18);
@@ -323,7 +326,7 @@
             // 
             // txtThuongHieu
             // 
-            this.txtThuongHieu.Location = new System.Drawing.Point(501, 167);
+            this.txtThuongHieu.Location = new System.Drawing.Point(588, 167);
             this.txtThuongHieu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtThuongHieu.Name = "txtThuongHieu";
             this.txtThuongHieu.Size = new System.Drawing.Size(174, 27);
@@ -331,7 +334,7 @@
             // 
             // txtPhanKhoi
             // 
-            this.txtPhanKhoi.Location = new System.Drawing.Point(501, 125);
+            this.txtPhanKhoi.Location = new System.Drawing.Point(588, 125);
             this.txtPhanKhoi.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPhanKhoi.Name = "txtPhanKhoi";
             this.txtPhanKhoi.Size = new System.Drawing.Size(174, 27);
@@ -348,7 +351,7 @@
             // lbGioiTinh
             // 
             this.lbGioiTinh.AutoSize = true;
-            this.lbGioiTinh.Location = new System.Drawing.Point(384, 219);
+            this.lbGioiTinh.Location = new System.Drawing.Point(471, 219);
             this.lbGioiTinh.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbGioiTinh.Name = "lbGioiTinh";
             this.lbGioiTinh.Size = new System.Drawing.Size(64, 18);
@@ -367,7 +370,7 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(381, 170);
+            this.lbEmail.Location = new System.Drawing.Point(468, 170);
             this.lbEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(110, 18);
@@ -386,7 +389,7 @@
             // lbSdt
             // 
             this.lbSdt.AutoSize = true;
-            this.lbSdt.Location = new System.Drawing.Point(381, 128);
+            this.lbSdt.Location = new System.Drawing.Point(468, 128);
             this.lbSdt.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbSdt.Name = "lbSdt";
             this.lbSdt.Size = new System.Drawing.Size(88, 18);
@@ -420,18 +423,31 @@
             // 
             // txtMau
             // 
-            this.txtMau.Location = new System.Drawing.Point(501, 78);
+            this.txtMau.Location = new System.Drawing.Point(588, 78);
             this.txtMau.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtMau.Name = "txtMau";
             this.txtMau.Size = new System.Drawing.Size(174, 27);
             this.txtMau.TabIndex = 202;
             // 
+            // pbXe
+            // 
+            this.pbXe.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pbXe.ErrorImage")));
+            this.pbXe.ImageRotate = 0F;
+            this.pbXe.Location = new System.Drawing.Point(474, 269);
+            this.pbXe.Margin = new System.Windows.Forms.Padding(2);
+            this.pbXe.Name = "pbXe";
+            this.pbXe.Size = new System.Drawing.Size(288, 211);
+            this.pbXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbXe.TabIndex = 222;
+            this.pbXe.TabStop = false;
+            // 
             // FChiTietXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(732, 533);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(787, 598);
+            this.Controls.Add(this.pbXe);
             this.Controls.Add(this.txtMau);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnBookCar);
@@ -473,6 +489,7 @@
             this.Text = "frmCarDetail";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbXe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,5 +534,6 @@
         public System.Windows.Forms.TextBox txtNamSX;
         public System.Windows.Forms.TextBox txtMau;
         private System.Windows.Forms.Label lblClose;
+        private Guna.UI2.WinForms.Guna2PictureBox pbXe;
     }
 }
