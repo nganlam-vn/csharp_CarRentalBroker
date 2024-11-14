@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMS_CarRentalBroker.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
     public partial class FLichSuThueXe : Form
     {
         public DBConnection dbConn = new DBConnection();
-        int userId = 3;
+        int userId = Global.MaND;
 
         public FLichSuThueXe()
         {

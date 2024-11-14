@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMS_CarRentalBroker.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -43,7 +44,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
             DateTime ngayBatDau = dtpFrom.Value;
             DateTime ngayKetThuc = dtpTo.Value;
 
-            int maND = 3;
+            int maND = Global.MaND;
             int maXe = Convert.ToInt32(CarDetailRow["MaXe"]);
             float donGia = 0;
             int choice = 0;

@@ -62,6 +62,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             FChiTietNguoiDung fChiTietNguoiDung = new FChiTietNguoiDung(nguoiDung, taiKhoan, true, this);
             fChiTietNguoiDung.TopLevel = false;
             fChiTietNguoiDung.voHieuHoaCbVaiTro();
+            fChiTietNguoiDung.voHieuHoaTbTenDangNhap();
             pnThongTin.Controls.Add(fChiTietNguoiDung);
             fChiTietNguoiDung.Show();
         }
@@ -82,9 +83,9 @@ namespace DBMS_CarRentalBroker.Views.Admin
             nguoiDungDao.timKiemNguoiDung(dgvNguoiDung, tbTimKiem.Text);
         }
 
-        private void FQuanLyNguoiDung_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            taiKhoanDao.dangXuat();
-        }
+        //private void FQuanLyNguoiDung_FormClosing(object sender, FormClosingEventArgs e)
+        //{
+        //    taiKhoanDao.dangXuat();
+        //}
     }
 }

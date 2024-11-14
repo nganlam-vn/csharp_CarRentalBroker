@@ -47,6 +47,8 @@ namespace DBMS_CarRentalBroker.Views.Admin
                     selectedXeId = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
                     FChiTietXe fChiTietXe = new FChiTietXe(idXe);
                     fChiTietXe.Show();
+                    FChiTietPhiBaiDang fChiTietPhiBaiDang = new FChiTietPhiBaiDang(idXe);
+                    fChiTietPhiBaiDang.Show();
                     //MessageBox.Show("Xe đã chọn: " + idXe);
 
 

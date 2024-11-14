@@ -147,7 +147,7 @@
             this.Controls.Add(this.tbTimKiem);
             this.Name = "FQuanLyNguoiDung";
             this.Text = "Quản lý người dùng";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FQuanLyNguoiDung_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FQuanLyNguoiDung_FormClosing);
             this.Load += new System.EventHandler(this.FQuanLyNguoiDung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DBMS_CarRentalBroker.Common;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -10,7 +11,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
     {
         public event Action ThanhToanThanhCong;
         private int maPhi;
-        int maND = 2;
+        int maND = Global.MaND;
         private string connectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=CarRentalBroker;Integrated Security=True;Encrypt=False;";
 
         public FChiTietPhi(int maPhi)
