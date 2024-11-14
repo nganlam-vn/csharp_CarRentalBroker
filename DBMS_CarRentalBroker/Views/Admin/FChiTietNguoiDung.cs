@@ -131,5 +131,10 @@ namespace DBMS_CarRentalBroker.Views.Admin
         {
             btnXoa.Visible = false;
         }
+
+        public void voHieuHoaTbTenDangNhap()
+        {
+            tbTenDangNhap.Enabled = false;
+        }
     }
 }
