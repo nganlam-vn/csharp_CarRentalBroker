@@ -18,8 +18,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
 
         private void FDanhSachXe_Load(object sender, EventArgs e)
         {
-            DataTable carList = nguoiThueDao.getAllCar();
-            dtgvCarList.DataSource = carList;
+            RefreshCarList();
         }
 
         private void dtgvCarList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -43,5 +42,12 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
                 carDetailFrm.ShowDialog();
             }
         }
+
+        public void RefreshCarList()
+        {
+            DataTable carList = nguoiThueDao.getAllCar();
+            dtgvCarList.DataSource = carList;
+        }
+
     }
 }

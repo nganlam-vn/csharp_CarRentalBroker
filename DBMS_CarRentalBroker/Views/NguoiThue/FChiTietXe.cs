@@ -111,8 +111,18 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
                     {
                         MessageBox.Show("Hợp đồng đặt xe thành công!");
                         this.Hide();
-                        FTrangChu  fTrangChu = new FTrangChu();
-                        fTrangChu.OpenChildForm(new FDanhSachHopDong());
+                        FTrangChu fTrangChu = new FTrangChu();
+
+                        try
+                        {
+                            fTrangChu.OpenChildForm(new FDanhSachHopDong());
+                            fTrangChu.Show();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error opening FDanhSachHopDong: " + ex.Message);
+                        }
+
                     }    
                     else
                     {
