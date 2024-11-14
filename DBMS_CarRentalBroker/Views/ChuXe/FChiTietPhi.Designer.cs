@@ -45,6 +45,9 @@
             this.txtTenXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBienSoXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtThuongHieu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -61,9 +64,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(41, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Số Tiền";
+            this.label2.Text = "Giá thuê";
             // 
             // label3
             // 
@@ -302,11 +305,40 @@
             this.txtThuongHieu.Size = new System.Drawing.Size(240, 29);
             this.txtThuongHieu.TabIndex = 17;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(44, 242);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Tổng tiền";
+            // 
+            // lblTongTien
+            // 
+            this.lblTongTien.AutoSize = true;
+            this.lblTongTien.Location = new System.Drawing.Point(152, 242);
+            this.lblTongTien.Name = "lblTongTien";
+            this.lblTongTien.Size = new System.Drawing.Size(0, 16);
+            this.lblTongTien.TabIndex = 19;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(423, 242);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(250, 16);
+            this.label10.TabIndex = 20;
+            this.label10.Text = "Có hiệu lực 30 ngày kể từ ngày thanh toán";
+            // 
             // FChiTietPhi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblTongTien);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtThuongHieu);
             this.Controls.Add(this.txtBienSoXe);
             this.Controls.Add(this.txtTenXe);
@@ -350,5 +382,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenXe;
         private Guna.UI2.WinForms.Guna2TextBox txtBienSoXe;
         private Guna.UI2.WinForms.Guna2TextBox txtThuongHieu;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTongTien;
+        private System.Windows.Forms.Label label10;
     }
 }
