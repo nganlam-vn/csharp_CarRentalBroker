@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,9 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
                 txtTheoGio.Text = CarDetailRow["TheoGio"].ToString();
                 txtTheoNgay.Text = CarDetailRow["TheoNgay"].ToString();
                 txtTheoThang.Text = CarDetailRow["TheoThang"].ToString();
+                pbXe.Refresh();
+                string relativePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "imgs", CarDetailRow["HinhAnh"].ToString());
+                pbXe.ImageLocation = relativePath;
             }
         }
 
