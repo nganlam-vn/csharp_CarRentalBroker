@@ -24,7 +24,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             SqlConnection conn = db.layKetNoi();
             using (conn)
             {
-                string query = "SELECT * FROM v_danhSachHopDong";
+                string query = "SELECT * FROM v_LayHopDongAdmin";
                 DataTable dataTable = new DataTable();
                 dataTable = db.thucThiDataTable(query);
 

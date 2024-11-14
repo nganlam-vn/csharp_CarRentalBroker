@@ -62,6 +62,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             FChiTietNguoiDung fChiTietNguoiDung = new FChiTietNguoiDung(nguoiDung, taiKhoan, true, this);
             fChiTietNguoiDung.TopLevel = false;
             fChiTietNguoiDung.voHieuHoaCbVaiTro();
+            fChiTietNguoiDung.voHieuHoaTbTenDangNhap();
             pnThongTin.Controls.Add(fChiTietNguoiDung);
             fChiTietNguoiDung.Show();
         }

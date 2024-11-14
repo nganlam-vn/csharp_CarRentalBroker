@@ -64,6 +64,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                     connection.Close();
 
                     MessageBox.Show("Thêm xe thành công!");
+                    this.Close();
                 }
             }
             catch (Exception ex)
