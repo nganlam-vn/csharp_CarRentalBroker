@@ -108,5 +108,14 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         {
         }
 
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FDangNhap fDangNhap = new FDangNhap();
+            fDangNhap.ShowDialog();
+
+            Application.Exit();
+        }
     }
 }
