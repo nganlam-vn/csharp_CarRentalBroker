@@ -61,14 +61,14 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void btnBestSeller_Click(object sender, EventArgs e)
         {
-            FTop5 fTop5 = new FTop5();
-            OpenChildForm(fTop5);
+            FThongKeXuHuong fThongKeXuHuong = new FThongKeXuHuong();
+            OpenChildForm(fThongKeXuHuong);
         }
 
         private void btnKhoanThanhToan_Click(object sender, EventArgs e)
         {
-            FDanhSachHopDong fDanhSachHopDong = new FDanhSachHopDong();
-            OpenChildForm(fDanhSachHopDong);
+            FCacKhoanThanhToan fCacKhoanThanhToan = new FCacKhoanThanhToan();
+            OpenChildForm(fCacKhoanThanhToan);
 
         }
 
@@ -95,6 +95,12 @@ namespace DBMS_CarRentalBroker.Views.Admin
             FHopDong fHopDong = new FHopDong();
             OpenChildForm(fHopDong);
 
+        }
+
+        private void btnLKNH_Click(object sender, EventArgs e)
+        {
+            FLienKetTKNganHang fLienKetTKNganHang = new FLienKetTKNganHang();
+            OpenChildForm(fLienKetTKNganHang);
         }
     }
 }
