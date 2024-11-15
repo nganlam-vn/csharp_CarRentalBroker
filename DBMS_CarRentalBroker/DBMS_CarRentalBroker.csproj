@@ -44,6 +44,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -81,6 +82,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dao\TaiKhoanDao.cs" />
+    <Compile Include="Views\Admin\FCacKhoanThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FCacKhoanThanhToan.Designer.cs">
+      <DependentUpon>FCacKhoanThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Admin\FChiTietNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +111,12 @@
     </Compile>
     <Compile Include="Views\Admin\FHopDong.Designer.cs">
       <DependentUpon>FHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\FThongKeXuHuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\FThongKeXuHuong.Designer.cs">
+      <DependentUpon>FThongKeXuHuong.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\FXeChoThanhToan.cs">
       <SubType>Form</SubType>
@@ -131,12 +144,6 @@
     </Compile>
     <Compile Include="Views\Admin\FDanhSachDangKyXe.Designer.cs">
       <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Admin\FTop5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Admin\FTop5.Designer.cs">
-      <DependentUpon>FTop5.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\FXeChoGiaHan.cs">
       <SubType>Form</SubType>
@@ -306,11 +313,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Admin\FCacKhoanThanhToan.resx">
+      <DependentUpon>FCacKhoanThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FChiTietPhiBaiDang.resx">
       <DependentUpon>FChiTietPhiBaiDang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FHopDong.resx">
       <DependentUpon>FHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Admin\FThongKeXuHuong.resx">
+      <DependentUpon>FThongKeXuHuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FXeChoThanhToan.resx">
       <DependentUpon>FXeChoThanhToan.cs</DependentUpon>
@@ -389,9 +402,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FDanhSachDangKyXe.resx">
       <DependentUpon>FDanhSachDangKyXe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Admin\FTop5.resx">
-      <DependentUpon>FTop5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Admin\FXeChoGiaHan.resx">
       <DependentUpon>FXeChoGiaHan.cs</DependentUpon>
