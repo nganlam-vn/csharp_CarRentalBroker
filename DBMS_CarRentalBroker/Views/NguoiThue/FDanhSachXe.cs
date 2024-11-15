@@ -81,13 +81,16 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
 
         private void GoiYThuongHieu()
         {
-            DialogResult hopThoaiGoiY = MessageBox.Show("Bạn có muốn dùng gợi ý của chúng tôi không?", "Gợi ý thương hiệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (hopThoaiGoiY == DialogResult.Yes)
+            if(Global.MaVT == 3)
             {
-                string sqlString = String.Format("SELECT dbo.func_GoiYThuongHieu('{0}')", Global.MaND);
-                DBConnect db = new DBConnect();
-                string tuKhoa = db.thucThiScalar(sqlString).ToString();
-                txtTimKiem.Text = tuKhoa;
+                DialogResult hopThoaiGoiY = MessageBox.Show("Bạn có muốn dùng gợi ý của chúng tôi không?", "Gợi ý thương hiệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (hopThoaiGoiY == DialogResult.Yes)
+                {
+                    string sqlString = String.Format("SELECT dbo.func_GoiYThuongHieu('{0}')", Global.MaND);
+                    DBConnect db = new DBConnect();
+                    string tuKhoa = db.thucThiScalar(sqlString).ToString();
+                    txtTimKiem.Text = tuKhoa;
+                }
             }
         }
     }
