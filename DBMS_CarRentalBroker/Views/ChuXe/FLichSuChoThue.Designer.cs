@@ -39,7 +39,7 @@
             this.dgvLichSuChoThue.Name = "dgvLichSuChoThue";
             this.dgvLichSuChoThue.RowHeadersWidth = 51;
             this.dgvLichSuChoThue.RowTemplate.Height = 24;
-            this.dgvLichSuChoThue.Size = new System.Drawing.Size(776, 426);
+            this.dgvLichSuChoThue.Size = new System.Drawing.Size(900, 426);
             this.dgvLichSuChoThue.TabIndex = 1;
             // 
             // FLichSuChoThue

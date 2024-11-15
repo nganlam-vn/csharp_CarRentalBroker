@@ -117,5 +117,10 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
 
             Application.Exit();
         }
+
+        private void btnLKTKNH_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FLienKetTKNganHang());
+        }
     }
 }
