@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartXeDien = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gvXeDien = new System.Windows.Forms.DataGridView();
             this.gvXeSan = new System.Windows.Forms.DataGridView();
@@ -44,26 +47,31 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.chartSoGhe = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.gvSoGhe = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.chartXeDien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvXeDien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvXeSan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartXeSan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTop5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSoGhe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSoGhe)).BeginInit();
             this.SuspendLayout();
             // 
             // chartXeDien
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartXeDien.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartXeDien.Legends.Add(legend1);
+            chartArea13.Name = "ChartArea1";
+            this.chartXeDien.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chartXeDien.Legends.Add(legend13);
             this.chartXeDien.Location = new System.Drawing.Point(35, 314);
             this.chartXeDien.Name = "chartXeDien";
             this.chartXeDien.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartXeDien.Series.Add(series1);
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Series1";
+            this.chartXeDien.Series.Add(series13);
             this.chartXeDien.Size = new System.Drawing.Size(374, 191);
             this.chartXeDien.TabIndex = 0;
             this.chartXeDien.Text = "chart1";
@@ -92,17 +100,17 @@
             // 
             // chartXeSan
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartXeSan.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartXeSan.Legends.Add(legend2);
+            chartArea14.Name = "ChartArea1";
+            this.chartXeSan.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chartXeSan.Legends.Add(legend14);
             this.chartXeSan.Location = new System.Drawing.Point(491, 314);
             this.chartXeSan.Name = "chartXeSan";
             this.chartXeSan.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartXeSan.Series.Add(series2);
+            series14.ChartArea = "ChartArea1";
+            series14.Legend = "Legend1";
+            series14.Name = "Series1";
+            this.chartXeSan.Series.Add(series14);
             this.chartXeSan.Size = new System.Drawing.Size(407, 191);
             this.chartXeSan.TabIndex = 3;
             this.chartXeSan.Text = "chart1";
@@ -111,7 +119,7 @@
             // 
             this.gvTop5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gvTop5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvTop5.Location = new System.Drawing.Point(35, 581);
+            this.gvTop5.Location = new System.Drawing.Point(35, 809);
             this.gvTop5.Name = "gvTop5";
             this.gvTop5.RowHeadersWidth = 62;
             this.gvTop5.RowTemplate.Height = 28;
@@ -123,7 +131,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(241, 529);
+            this.label1.Location = new System.Drawing.Point(240, 777);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(451, 29);
             this.label1.TabIndex = 5;
@@ -173,11 +181,53 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "XE SỐ SÀN/ XE TỰ ĐỘNG";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Teal;
+            this.label6.Location = new System.Drawing.Point(127, 533);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(161, 25);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "THEO SỐ GHẾ";
+            // 
+            // chartSoGhe
+            // 
+            chartArea15.Name = "ChartArea1";
+            this.chartSoGhe.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.chartSoGhe.Legends.Add(legend15);
+            this.chartSoGhe.Location = new System.Drawing.Point(35, 561);
+            this.chartSoGhe.Name = "chartSoGhe";
+            this.chartSoGhe.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series15.ChartArea = "ChartArea1";
+            series15.Legend = "Legend1";
+            series15.Name = "Series1";
+            this.chartSoGhe.Series.Add(series15);
+            this.chartSoGhe.Size = new System.Drawing.Size(514, 190);
+            this.chartSoGhe.TabIndex = 11;
+            this.chartSoGhe.Text = "chart1";
+            // 
+            // gvSoGhe
+            // 
+            this.gvSoGhe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gvSoGhe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvSoGhe.Location = new System.Drawing.Point(563, 576);
+            this.gvSoGhe.Name = "gvSoGhe";
+            this.gvSoGhe.RowHeadersWidth = 62;
+            this.gvSoGhe.RowTemplate.Height = 28;
+            this.gvSoGhe.Size = new System.Drawing.Size(346, 150);
+            this.gvSoGhe.TabIndex = 12;
+            // 
             // FThongKeXuHuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 832);
+            this.ClientSize = new System.Drawing.Size(921, 1050);
+            this.Controls.Add(this.gvSoGhe);
+            this.Controls.Add(this.chartSoGhe);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -196,6 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gvXeSan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartXeSan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvTop5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSoGhe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvSoGhe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -213,5 +265,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSoGhe;
+        private System.Windows.Forms.DataGridView gvSoGhe;
     }
 }

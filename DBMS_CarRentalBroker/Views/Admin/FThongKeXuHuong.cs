@@ -27,6 +27,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             XeSoSan_Load();
             XeSDien_Load();
             Top5_Load();
+            XeTheoGhe_Load();
 
         }
 
@@ -54,6 +55,20 @@ namespace DBMS_CarRentalBroker.Views.Admin
                 dataTable = db.thucThiDataTable(query);
                 gvXeDien.DataSource = dataTable;
                 DisplayChartXeDien(dataTable);
+            }
+
+        }
+
+        private void XeTheoGhe_Load()
+        {
+            SqlConnection conn = db.layKetNoi();
+            using (conn)
+            {
+                string query = "SELECT * FROM f_TyLeThueXeTheoGhe()";
+                DataTable dataTable = new DataTable();
+                dataTable = db.thucThiDataTable(query);
+                gvSoGhe.DataSource = dataTable;
+                DisplayChartXeTheoGhe(dataTable);
             }
 
         }
@@ -112,5 +127,26 @@ namespace DBMS_CarRentalBroker.Views.Admin
             chartXeSan.Series.Add(series);
             chartXeSan.Titles.Add("Xu hướng thuê xe số sàn và xe tự động");
         }
+
+        private void DisplayChartXeTheoGhe(DataTable dataTable)
+        {
+            // Cấu hình cho Chart Control
+            chartSoGhe.Series.Clear();
+            Series series = new Series("Số lần thuê");
+            series.ChartType = SeriesChartType.Column;
+
+            // Thêm dữ liệu từ DataTable vào biểu đồ
+            foreach (DataRow row in dataTable.Rows)
+            {
+                string xValue = row["SoGhe"].ToString();  // Lấy số ghế làm trục X
+                int yValue = Convert.ToInt32(row["SoLanThue"]);  // Lấy số lần thuê làm trục Y
+                series.Points.AddXY(xValue, yValue);
+            }
+
+            chartSoGhe.Series.Add(series);
+            chartSoGhe.Titles.Clear();
+            chartSoGhe.Titles.Add("Xu hướng thuê xe theo số ghế");
+        }
+
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnBestSeller = new Guna.UI2.WinForms.Guna2Button();
             this.btnLKNH = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuanLyNguoiDung = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBestSeller = new Guna.UI2.WinForms.Guna2Button();
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.btnXeTrenSan = new Guna.UI2.WinForms.Guna2Button();
             this.btnDSHopDong = new Guna.UI2.WinForms.Guna2Button();
@@ -40,8 +40,8 @@
             this.btnDaDuocThue = new Guna.UI2.WinForms.Guna2Button();
             this.btnDangKiXe = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.pnContent = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnContent = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,25 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(240, 675);
             this.guna2ShadowPanel1.TabIndex = 2;
             // 
+            // btnBestSeller
+            // 
+            this.btnBestSeller.BorderColor = System.Drawing.Color.Silver;
+            this.btnBestSeller.BorderThickness = 5;
+            this.btnBestSeller.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBestSeller.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBestSeller.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBestSeller.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBestSeller.FillColor = System.Drawing.Color.Teal;
+            this.btnBestSeller.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBestSeller.ForeColor = System.Drawing.Color.White;
+            this.btnBestSeller.Location = new System.Drawing.Point(3, 336);
+            this.btnBestSeller.Name = "btnBestSeller";
+            this.btnBestSeller.Size = new System.Drawing.Size(231, 59);
+            this.btnBestSeller.TabIndex = 5;
+            this.btnBestSeller.Text = "Thống kê xu hướng";
+            this.btnBestSeller.Tile = true;
+            this.btnBestSeller.Click += new System.EventHandler(this.btnBestSeller_Click);
+            // 
             // btnLKNH
             // 
             this.btnLKNH.BorderColor = System.Drawing.Color.Silver;
@@ -77,9 +96,9 @@
             this.btnLKNH.FillColor = System.Drawing.Color.Teal;
             this.btnLKNH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLKNH.ForeColor = System.Drawing.Color.White;
-            this.btnLKNH.Location = new System.Drawing.Point(3, 67);
+            this.btnLKNH.Location = new System.Drawing.Point(3, 58);
             this.btnLKNH.Name = "btnLKNH";
-            this.btnLKNH.Size = new System.Drawing.Size(231, 74);
+            this.btnLKNH.Size = new System.Drawing.Size(231, 63);
             this.btnLKNH.TabIndex = 5;
             this.btnLKNH.Text = "Liên kết ngân hàng";
             this.btnLKNH.Click += new System.EventHandler(this.btnLKNH_Click);
@@ -97,29 +116,10 @@
             this.btnQuanLyNguoiDung.ForeColor = System.Drawing.Color.White;
             this.btnQuanLyNguoiDung.Location = new System.Drawing.Point(3, 2);
             this.btnQuanLyNguoiDung.Name = "btnQuanLyNguoiDung";
-            this.btnQuanLyNguoiDung.Size = new System.Drawing.Size(231, 69);
+            this.btnQuanLyNguoiDung.Size = new System.Drawing.Size(231, 59);
             this.btnQuanLyNguoiDung.TabIndex = 7;
             this.btnQuanLyNguoiDung.Text = "Quản lý người dùng";
             this.btnQuanLyNguoiDung.Click += new System.EventHandler(this.btnQuanLyNguoiDung_Click);
-            // 
-            // btnBestSeller
-            // 
-            this.btnBestSeller.BorderColor = System.Drawing.Color.Silver;
-            this.btnBestSeller.BorderThickness = 5;
-            this.btnBestSeller.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBestSeller.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBestSeller.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBestSeller.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBestSeller.FillColor = System.Drawing.Color.Teal;
-            this.btnBestSeller.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBestSeller.ForeColor = System.Drawing.Color.White;
-            this.btnBestSeller.Location = new System.Drawing.Point(3, 395);
-            this.btnBestSeller.Name = "btnBestSeller";
-            this.btnBestSeller.Size = new System.Drawing.Size(231, 77);
-            this.btnBestSeller.TabIndex = 5;
-            this.btnBestSeller.Text = "Thống kê xu hướng";
-            this.btnBestSeller.Tile = true;
-            this.btnBestSeller.Click += new System.EventHandler(this.btnBestSeller_Click);
             // 
             // btnThanhToan
             // 
@@ -132,9 +132,9 @@
             this.btnThanhToan.FillColor = System.Drawing.Color.Teal;
             this.btnThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnThanhToan.Location = new System.Drawing.Point(3, 470);
+            this.btnThanhToan.Location = new System.Drawing.Point(3, 388);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(231, 69);
+            this.btnThanhToan.Size = new System.Drawing.Size(231, 80);
             this.btnThanhToan.TabIndex = 5;
             this.btnThanhToan.Text = "Xe chờ Chủ xe thanh toán";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
@@ -150,9 +150,9 @@
             this.btnXeTrenSan.FillColor = System.Drawing.Color.Teal;
             this.btnXeTrenSan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXeTrenSan.ForeColor = System.Drawing.Color.White;
-            this.btnXeTrenSan.Location = new System.Drawing.Point(3, 139);
+            this.btnXeTrenSan.Location = new System.Drawing.Point(3, 118);
             this.btnXeTrenSan.Name = "btnXeTrenSan";
-            this.btnXeTrenSan.Size = new System.Drawing.Size(231, 69);
+            this.btnXeTrenSan.Size = new System.Drawing.Size(231, 60);
             this.btnXeTrenSan.TabIndex = 6;
             this.btnXeTrenSan.Text = "Xe đang trên sàn";
             this.btnXeTrenSan.Click += new System.EventHandler(this.btnXeTrenSan_Click);
@@ -168,9 +168,9 @@
             this.btnDSHopDong.FillColor = System.Drawing.Color.Teal;
             this.btnDSHopDong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSHopDong.ForeColor = System.Drawing.Color.White;
-            this.btnDSHopDong.Location = new System.Drawing.Point(3, 602);
+            this.btnDSHopDong.Location = new System.Drawing.Point(3, 527);
             this.btnDSHopDong.Name = "btnDSHopDong";
-            this.btnDSHopDong.Size = new System.Drawing.Size(231, 69);
+            this.btnDSHopDong.Size = new System.Drawing.Size(231, 54);
             this.btnDSHopDong.TabIndex = 4;
             this.btnDSHopDong.Text = "Danh sách Hợp đồng";
             this.btnDSHopDong.Click += new System.EventHandler(this.btnDSHopDong_Click);
@@ -186,9 +186,9 @@
             this.btnKhoanThanhToan.FillColor = System.Drawing.Color.Teal;
             this.btnKhoanThanhToan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhoanThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btnKhoanThanhToan.Location = new System.Drawing.Point(3, 536);
+            this.btnKhoanThanhToan.Location = new System.Drawing.Point(3, 464);
             this.btnKhoanThanhToan.Name = "btnKhoanThanhToan";
-            this.btnKhoanThanhToan.Size = new System.Drawing.Size(231, 69);
+            this.btnKhoanThanhToan.Size = new System.Drawing.Size(231, 68);
             this.btnKhoanThanhToan.TabIndex = 3;
             this.btnKhoanThanhToan.Text = "Xe chờ Người thuê thanh toán";
             this.btnKhoanThanhToan.Click += new System.EventHandler(this.btnKhoanThanhToan_Click);
@@ -204,9 +204,9 @@
             this.btnGiaHan.FillColor = System.Drawing.Color.Teal;
             this.btnGiaHan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGiaHan.ForeColor = System.Drawing.Color.White;
-            this.btnGiaHan.Location = new System.Drawing.Point(3, 336);
+            this.btnGiaHan.Location = new System.Drawing.Point(3, 287);
             this.btnGiaHan.Name = "btnGiaHan";
-            this.btnGiaHan.Size = new System.Drawing.Size(231, 69);
+            this.btnGiaHan.Size = new System.Drawing.Size(231, 53);
             this.btnGiaHan.TabIndex = 2;
             this.btnGiaHan.Text = "Xe chờ gia hạn";
             this.btnGiaHan.Click += new System.EventHandler(this.btnGiaHan_Click);
@@ -222,9 +222,9 @@
             this.btnDaDuocThue.FillColor = System.Drawing.Color.Teal;
             this.btnDaDuocThue.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDaDuocThue.ForeColor = System.Drawing.Color.White;
-            this.btnDaDuocThue.Location = new System.Drawing.Point(3, 270);
+            this.btnDaDuocThue.Location = new System.Drawing.Point(3, 230);
             this.btnDaDuocThue.Name = "btnDaDuocThue";
-            this.btnDaDuocThue.Size = new System.Drawing.Size(231, 69);
+            this.btnDaDuocThue.Size = new System.Drawing.Size(231, 60);
             this.btnDaDuocThue.TabIndex = 1;
             this.btnDaDuocThue.Text = "Xe đã được thuê";
             this.btnDaDuocThue.Click += new System.EventHandler(this.btnDaDuocThue_Click);
@@ -240,9 +240,9 @@
             this.btnDangKiXe.FillColor = System.Drawing.Color.Teal;
             this.btnDangKiXe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKiXe.ForeColor = System.Drawing.Color.White;
-            this.btnDangKiXe.Location = new System.Drawing.Point(3, 205);
+            this.btnDangKiXe.Location = new System.Drawing.Point(3, 174);
             this.btnDangKiXe.Name = "btnDangKiXe";
-            this.btnDangKiXe.Size = new System.Drawing.Size(231, 69);
+            this.btnDangKiXe.Size = new System.Drawing.Size(231, 59);
             this.btnDangKiXe.TabIndex = 0;
             this.btnDangKiXe.Text = "Danh sách đăng kí xe ";
             this.btnDangKiXe.Click += new System.EventHandler(this.btnDangKiXe_Click);
@@ -258,14 +258,6 @@
             this.guna2ShadowPanel2.Size = new System.Drawing.Size(920, 112);
             this.guna2ShadowPanel2.TabIndex = 3;
             // 
-            // pnContent
-            // 
-            this.pnContent.AutoScroll = true;
-            this.pnContent.Location = new System.Drawing.Point(269, 131);
-            this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(811, 593);
-            this.pnContent.TabIndex = 4;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -277,18 +269,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "LUCY\'s CAR RENTAL BROKER";
             // 
+            // pnContent
+            // 
+            this.pnContent.AutoScroll = true;
+            this.pnContent.Location = new System.Drawing.Point(269, 131);
+            this.pnContent.Name = "pnContent";
+            this.pnContent.Size = new System.Drawing.Size(811, 593);
+            this.pnContent.TabIndex = 4;
+            // 
             // FAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1082, 687);
+            this.ClientSize = new System.Drawing.Size(1082, 581);
             this.Controls.Add(this.pnContent);
             this.Controls.Add(this.guna2ShadowPanel2);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FAdmin";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAdmin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FAdmin_FormClosing);
             this.guna2ShadowPanel1.ResumeLayout(false);
