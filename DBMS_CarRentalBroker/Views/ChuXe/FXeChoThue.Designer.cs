@@ -43,7 +43,7 @@
             this.dgvXeChoThue.Name = "dgvXeChoThue";
             this.dgvXeChoThue.RowHeadersWidth = 51;
             this.dgvXeChoThue.RowTemplate.Height = 24;
-            this.dgvXeChoThue.Size = new System.Drawing.Size(776, 375);
+            this.dgvXeChoThue.Size = new System.Drawing.Size(900, 375);
             this.dgvXeChoThue.TabIndex = 23;
             this.dgvXeChoThue.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXeChoThue_CellContentClick);
             // 

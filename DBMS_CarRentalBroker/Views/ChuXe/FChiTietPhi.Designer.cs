@@ -45,9 +45,9 @@
             this.txtTenXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtBienSoXe = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtThuongHieu = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblTongTien = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -305,15 +305,6 @@
             this.txtThuongHieu.Size = new System.Drawing.Size(240, 29);
             this.txtThuongHieu.TabIndex = 17;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(44, 242);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 16);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Tổng tiền";
-            // 
             // lblTongTien
             // 
             this.lblTongTien.AutoSize = true;
@@ -330,6 +321,15 @@
             this.label10.Size = new System.Drawing.Size(250, 16);
             this.label10.TabIndex = 20;
             this.label10.Text = "Có hiệu lực 30 ngày kể từ ngày thanh toán";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(44, 242);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(63, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Tổng tiền";
             // 
             // FChiTietPhi
             // 
@@ -382,8 +382,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTenXe;
         private Guna.UI2.WinForms.Guna2TextBox txtBienSoXe;
         private Guna.UI2.WinForms.Guna2TextBox txtThuongHieu;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

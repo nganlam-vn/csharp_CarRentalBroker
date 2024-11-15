@@ -42,7 +42,7 @@
             this.dgvXeCuaToi.Name = "dgvXeCuaToi";
             this.dgvXeCuaToi.RowHeadersWidth = 51;
             this.dgvXeCuaToi.RowTemplate.Height = 24;
-            this.dgvXeCuaToi.Size = new System.Drawing.Size(776, 297);
+            this.dgvXeCuaToi.Size = new System.Drawing.Size(900, 297);
             this.dgvXeCuaToi.TabIndex = 22;
             this.dgvXeCuaToi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXeCuaToi_CellContentClick);
             // 
