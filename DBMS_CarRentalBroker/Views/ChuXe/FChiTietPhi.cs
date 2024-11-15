@@ -43,17 +43,6 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
                     txtTenXe.Text = reader["TenXe"].ToString();
                     txtBienSoXe.Text = reader["BienSoXe"].ToString();
                     txtThuongHieu.Text = reader["ThuongHieu"].ToString();
-
-                    int soTien = 0;
-                    if (int.TryParse(txtSoTien.Text, out soTien))
-                    {
-                        int tongTien = (int)(soTien * 0.05);
-                        lblTongTien.Text = tongTien.ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng nhập một số hợp lệ.");
-                    }
                 }
                 else
                 {

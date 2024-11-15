@@ -103,7 +103,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
         private void FAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             taiKhoanDao.dangXuat();
-            
+        }
         private void btnLKNH_Click(object sender, EventArgs e)
         {
             FLienKetTKNganHang fLienKetTKNganHang = new FLienKetTKNganHang();

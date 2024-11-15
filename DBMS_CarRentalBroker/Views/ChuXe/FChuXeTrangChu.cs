@@ -123,6 +123,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         private void FChuXeTrangChu_FormClosing(object sender, FormClosingEventArgs e)
         {
             taiKhoanDao.dangXuat();
+        }
 
         private void btnLKTKNH_Click(object sender, EventArgs e)
         {
