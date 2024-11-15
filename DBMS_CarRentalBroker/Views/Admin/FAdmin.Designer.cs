@@ -290,6 +290,7 @@
             this.Name = "FAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAdmin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FAdmin_FormClosing);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel2.ResumeLayout(false);
             this.guna2ShadowPanel2.PerformLayout();

@@ -54,6 +54,7 @@
             this.btnLichSuThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLichSuThanhToan.Name = "btnLichSuThanhToan";
             this.btnLichSuThanhToan.Size = new System.Drawing.Size(180, 46);
+
             this.btnLichSuThanhToan.TabIndex = 26;
             this.btnLichSuThanhToan.Text = "Lịch Sử Thanh Toán";
             this.btnLichSuThanhToan.Click += new System.EventHandler(this.btnLichSuThanhToan_Click);
@@ -72,6 +73,7 @@
             this.btnLichSuChoThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLichSuChoThue.Name = "btnLichSuChoThue";
             this.btnLichSuChoThue.Size = new System.Drawing.Size(180, 46);
+
             this.btnLichSuChoThue.TabIndex = 25;
             this.btnLichSuChoThue.Text = "Lịch Sử Cho Thuê";
             this.btnLichSuChoThue.Click += new System.EventHandler(this.btnLichSuChoThue_Click);
@@ -86,10 +88,12 @@
             this.btnTrangThaiDangKy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(191)))), ((int)(((byte)(158)))));
             this.btnTrangThaiDangKy.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnTrangThaiDangKy.ForeColor = System.Drawing.SystemColors.Window;
+
             this.btnTrangThaiDangKy.Location = new System.Drawing.Point(13, 210);
             this.btnTrangThaiDangKy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTrangThaiDangKy.Name = "btnTrangThaiDangKy";
             this.btnTrangThaiDangKy.Size = new System.Drawing.Size(180, 46);
+
             this.btnTrangThaiDangKy.TabIndex = 24;
             this.btnTrangThaiDangKy.Text = "Trạng Thái Bài Đăng";
             this.btnTrangThaiDangKy.Click += new System.EventHandler(this.btnTrangThaiDangKy_Click);
@@ -104,10 +108,12 @@
             this.btnXeCuaToi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(191)))), ((int)(((byte)(158)))));
             this.btnXeCuaToi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXeCuaToi.ForeColor = System.Drawing.SystemColors.Window;
+
             this.btnXeCuaToi.Location = new System.Drawing.Point(13, 150);
             this.btnXeCuaToi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXeCuaToi.Name = "btnXeCuaToi";
             this.btnXeCuaToi.Size = new System.Drawing.Size(180, 46);
+
             this.btnXeCuaToi.TabIndex = 23;
             this.btnXeCuaToi.Text = "Xe Của Tôi";
             this.btnXeCuaToi.Click += new System.EventHandler(this.btnXeCuaToi_Click);
@@ -122,37 +128,45 @@
             this.btnXeChoThue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(191)))), ((int)(((byte)(158)))));
             this.btnXeChoThue.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnXeChoThue.ForeColor = System.Drawing.SystemColors.Window;
+
             this.btnXeChoThue.Location = new System.Drawing.Point(13, 89);
             this.btnXeChoThue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXeChoThue.Name = "btnXeChoThue";
             this.btnXeChoThue.Size = new System.Drawing.Size(180, 46);
+
             this.btnXeChoThue.TabIndex = 22;
             this.btnXeChoThue.Text = "Xe Cho Thuê";
             this.btnXeChoThue.Click += new System.EventHandler(this.btnXeChoThue_Click);
             // 
             // pnlChuXeTrangChu
             // 
+
             this.pnlChuXeTrangChu.Location = new System.Drawing.Point(217, 12);
             this.pnlChuXeTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlChuXeTrangChu.Name = "pnlChuXeTrangChu";
             this.pnlChuXeTrangChu.Size = new System.Drawing.Size(1068, 511);
+
             this.pnlChuXeTrangChu.TabIndex = 27;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+
             this.label1.Location = new System.Drawing.Point(1331, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
+
             this.label1.TabIndex = 28;
             this.label1.Text = "Số Dư";
             // 
             // lblSoDu
             // 
             this.lblSoDu.AutoSize = true;
+
             this.lblSoDu.Location = new System.Drawing.Point(1331, 37);
             this.lblSoDu.Name = "lblSoDu";
             this.lblSoDu.Size = new System.Drawing.Size(0, 16);
+
             this.lblSoDu.TabIndex = 29;
             // 
             // btnDangXuat
@@ -165,10 +179,12 @@
             this.btnDangXuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(191)))), ((int)(((byte)(158)))));
             this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDangXuat.ForeColor = System.Drawing.SystemColors.Window;
+
             this.btnDangXuat.Location = new System.Drawing.Point(15, 478);
             this.btnDangXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(180, 46);
+
             this.btnDangXuat.TabIndex = 30;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
@@ -190,10 +206,12 @@
             // 
             // FChuXeTrangChu
             // 
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1493, 566);
             this.Controls.Add(this.btnLKTKNH);
+
             this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.lblSoDu);
             this.Controls.Add(this.label1);
@@ -203,9 +221,11 @@
             this.Controls.Add(this.btnXeCuaToi);
             this.Controls.Add(this.btnXeChoThue);
             this.Controls.Add(this.pnlChuXeTrangChu);
+
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FChuXeTrangChu";
             this.Text = "FChuXeTrangChu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FChuXeTrangChu_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

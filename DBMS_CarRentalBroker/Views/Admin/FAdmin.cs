@@ -1,4 +1,5 @@
-﻿using DBMS_CarRentalBroker.Views.NguoiThue;
+﻿using CarRentalBroker.Dao;
+using DBMS_CarRentalBroker.Views.NguoiThue;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
     public partial class FAdmin : Form
     {
         private Form currentFormchild;
+        TaiKhoanDao taiKhoanDao = new TaiKhoanDao();
         public FAdmin()
         {
             InitializeComponent();
@@ -97,10 +99,16 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         }
 
+
+        private void FAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            taiKhoanDao.dangXuat();
+            
         private void btnLKNH_Click(object sender, EventArgs e)
         {
             FLienKetTKNganHang fLienKetTKNganHang = new FLienKetTKNganHang();
             OpenChildForm(fLienKetTKNganHang);
+
         }
     }
 }

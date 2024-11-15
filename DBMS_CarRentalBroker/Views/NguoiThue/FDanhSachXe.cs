@@ -1,4 +1,6 @@
-﻿using DBMS_CarRentalBroker.Dao;
+﻿using CarRentalBroker;
+using DBMS_CarRentalBroker.Common;
+using DBMS_CarRentalBroker.Dao;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -23,6 +25,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
         private void FDanhSachXe_Load(object sender, EventArgs e)
         {
             RefreshCarList();
+            GoiYThuongHieu();
         }
 
         private void dtgvCarList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -76,5 +79,16 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
             }
         }
 
+        private void GoiYThuongHieu()
+        {
+            DialogResult hopThoaiGoiY = MessageBox.Show("Bạn có muốn dùng gợi ý của chúng tôi không?", "Gợi ý thương hiệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (hopThoaiGoiY == DialogResult.Yes)
+            {
+                string sqlString = String.Format("SELECT dbo.func_GoiYThuongHieu('{0}')", Global.MaND);
+                DBConnect db = new DBConnect();
+                string tuKhoa = db.thucThiScalar(sqlString).ToString();
+                txtTimKiem.Text = tuKhoa;
+            }
+        }
     }
 }
