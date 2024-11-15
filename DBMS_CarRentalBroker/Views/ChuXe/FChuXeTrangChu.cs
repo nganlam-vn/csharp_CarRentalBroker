@@ -1,4 +1,5 @@
-﻿using DBMS_CarRentalBroker.Common;
+﻿using CarRentalBroker.Dao;
+using DBMS_CarRentalBroker.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
         //int maND = Global.maND;
         int maND = Global.MaND;
         private Form currentFormchild;
-
+        TaiKhoanDao taiKhoanDao = new TaiKhoanDao();
         public FChuXeTrangChu()
         {
             InitializeComponent();
@@ -116,6 +117,11 @@ namespace DBMS_CarRentalBroker.Views.ChuXe
             fDangNhap.ShowDialog();
 
             Application.Exit();
+        }
+
+        private void FChuXeTrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            taiKhoanDao.dangXuat();
         }
     }
 }

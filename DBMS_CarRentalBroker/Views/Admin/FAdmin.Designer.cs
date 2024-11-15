@@ -255,6 +255,7 @@
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FAdmin";
             this.Text = "FAdmin";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FAdmin_FormClosing);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
