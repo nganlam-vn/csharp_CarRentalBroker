@@ -39,7 +39,7 @@
             this.dgvLichSuThanhToan.Name = "dgvLichSuThanhToan";
             this.dgvLichSuThanhToan.RowHeadersWidth = 51;
             this.dgvLichSuThanhToan.RowTemplate.Height = 24;
-            this.dgvLichSuThanhToan.Size = new System.Drawing.Size(776, 426);
+            this.dgvLichSuThanhToan.Size = new System.Drawing.Size(900, 426);
             this.dgvLichSuThanhToan.TabIndex = 1;
             // 
             // FLichSuThanhToan

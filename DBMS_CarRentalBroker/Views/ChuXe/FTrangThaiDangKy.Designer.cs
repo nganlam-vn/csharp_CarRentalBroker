@@ -39,7 +39,7 @@
             this.dgvTrangThaiDangKy.Name = "dgvTrangThaiDangKy";
             this.dgvTrangThaiDangKy.RowHeadersWidth = 51;
             this.dgvTrangThaiDangKy.RowTemplate.Height = 24;
-            this.dgvTrangThaiDangKy.Size = new System.Drawing.Size(776, 426);
+            this.dgvTrangThaiDangKy.Size = new System.Drawing.Size(900, 426);
             this.dgvTrangThaiDangKy.TabIndex = 1;
             // 
             // FTrangThaiDangKy
