@@ -112,11 +112,11 @@
             // lbGio
             // 
             this.lbGio.AutoSize = true;
-            this.lbGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbGio.Location = new System.Drawing.Point(230, 154);
             this.lbGio.Name = "lbGio";
-            this.lbGio.Size = new System.Drawing.Size(104, 29);
+            this.lbGio.Size = new System.Drawing.Size(97, 26);
             this.lbGio.TabIndex = 5;
             this.lbGio.Text = "400.000";
             // 
@@ -292,11 +292,11 @@
             // lbNgay
             // 
             this.lbNgay.AutoSize = true;
-            this.lbNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbNgay.Location = new System.Drawing.Point(230, 199);
             this.lbNgay.Name = "lbNgay";
-            this.lbNgay.Size = new System.Drawing.Size(104, 29);
+            this.lbNgay.Size = new System.Drawing.Size(97, 26);
             this.lbNgay.TabIndex = 26;
             this.lbNgay.Text = "400.000";
             // 
@@ -325,11 +325,11 @@
             // lbThang
             // 
             this.lbThang.AutoSize = true;
-            this.lbThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.lbThang.Location = new System.Drawing.Point(230, 241);
             this.lbThang.Name = "lbThang";
-            this.lbThang.Size = new System.Drawing.Size(104, 29);
+            this.lbThang.Size = new System.Drawing.Size(97, 26);
             this.lbThang.TabIndex = 29;
             this.lbThang.Text = "400.000";
             // 

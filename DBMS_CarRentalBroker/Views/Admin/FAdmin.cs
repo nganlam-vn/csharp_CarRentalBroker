@@ -43,7 +43,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void btnXeTrenSan_Click(object sender, EventArgs e)
         {
-            FDanhSachXe fXeTrenSan = new FDanhSachXe();
+            FXeTrenSan fXeTrenSan = new FXeTrenSan();
             OpenChildForm(fXeTrenSan);
 
         }
