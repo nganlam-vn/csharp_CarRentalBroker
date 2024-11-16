@@ -32,17 +32,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtYeuCau = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnTim = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvYeuCau)).BeginInit();
             this.SuspendLayout();
             // 
             // gvYeuCau
             // 
             this.gvYeuCau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvYeuCau.Location = new System.Drawing.Point(12, 149);
+            this.gvYeuCau.Location = new System.Drawing.Point(12, 272);
             this.gvYeuCau.Name = "gvYeuCau";
             this.gvYeuCau.RowHeadersWidth = 62;
             this.gvYeuCau.RowTemplate.Height = 28;
-            this.gvYeuCau.Size = new System.Drawing.Size(975, 344);
+            this.gvYeuCau.Size = new System.Drawing.Size(1171, 454);
             this.gvYeuCau.TabIndex = 0;
             this.gvYeuCau.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvYeuCau_CellClick);
             // 
@@ -50,7 +51,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 35);
+            this.label1.Location = new System.Drawing.Point(38, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(341, 29);
             this.label1.TabIndex = 1;
@@ -67,7 +68,7 @@
             this.txtYeuCau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtYeuCau.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYeuCau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtYeuCau.Location = new System.Drawing.Point(43, 69);
+            this.txtYeuCau.Location = new System.Drawing.Point(43, 192);
             this.txtYeuCau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtYeuCau.Name = "txtYeuCau";
             this.txtYeuCau.PasswordChar = '\0';
@@ -85,7 +86,7 @@
             this.btnTim.FillColor = System.Drawing.Color.LightSeaGreen;
             this.btnTim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.ForeColor = System.Drawing.Color.White;
-            this.btnTim.Location = new System.Drawing.Point(779, 69);
+            this.btnTim.Location = new System.Drawing.Point(779, 192);
             this.btnTim.Name = "btnTim";
             this.btnTim.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnTim.Size = new System.Drawing.Size(114, 60);
@@ -93,12 +94,24 @@
             this.btnTim.Text = "Tìm";
             this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
+            this.label2.Location = new System.Drawing.Point(159, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(786, 37);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "HÃY BẮT ĐẦU HÀNH TRÌNH CỦA BẠN TẠI ĐÂY !";
+            // 
             // FXeTrenSan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(999, 505);
+            this.ClientSize = new System.Drawing.Size(1191, 738);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnTim);
             this.Controls.Add(this.txtYeuCau);
             this.Controls.Add(this.label1);
@@ -118,5 +131,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtYeuCau;
         private Guna.UI2.WinForms.Guna2CircleButton btnTim;
+        private System.Windows.Forms.Label label2;
     }
 }
