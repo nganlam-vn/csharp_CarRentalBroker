@@ -49,21 +49,21 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.btnDSHopDong);
             this.guna2ShadowPanel1.Controls.Add(this.btnBestSeller);
             this.guna2ShadowPanel1.Controls.Add(this.btnLKNH);
             this.guna2ShadowPanel1.Controls.Add(this.btnQuanLyNguoiDung);
             this.guna2ShadowPanel1.Controls.Add(this.btnThanhToan);
             this.guna2ShadowPanel1.Controls.Add(this.btnXeTrenSan);
-            this.guna2ShadowPanel1.Controls.Add(this.btnDSHopDong);
             this.guna2ShadowPanel1.Controls.Add(this.btnKhoanThanhToan);
             this.guna2ShadowPanel1.Controls.Add(this.btnGiaHan);
             this.guna2ShadowPanel1.Controls.Add(this.btnDaDuocThue);
             this.guna2ShadowPanel1.Controls.Add(this.btnDangKiXe);
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(-2, 0);
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(1, 3);
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(240, 675);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(240, 585);
             this.guna2ShadowPanel1.TabIndex = 2;
             // 
             // btnBestSeller
@@ -134,7 +134,7 @@
             this.btnThanhToan.ForeColor = System.Drawing.Color.White;
             this.btnThanhToan.Location = new System.Drawing.Point(3, 388);
             this.btnThanhToan.Name = "btnThanhToan";
-            this.btnThanhToan.Size = new System.Drawing.Size(231, 80);
+            this.btnThanhToan.Size = new System.Drawing.Size(231, 77);
             this.btnThanhToan.TabIndex = 5;
             this.btnThanhToan.Text = "Xe chờ Chủ xe thanh toán";
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
@@ -168,7 +168,7 @@
             this.btnDSHopDong.FillColor = System.Drawing.Color.Teal;
             this.btnDSHopDong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDSHopDong.ForeColor = System.Drawing.Color.White;
-            this.btnDSHopDong.Location = new System.Drawing.Point(3, 527);
+            this.btnDSHopDong.Location = new System.Drawing.Point(3, 531);
             this.btnDSHopDong.Name = "btnDSHopDong";
             this.btnDSHopDong.Size = new System.Drawing.Size(231, 54);
             this.btnDSHopDong.TabIndex = 4;
@@ -272,9 +272,9 @@
             // pnContent
             // 
             this.pnContent.AutoScroll = true;
-            this.pnContent.Location = new System.Drawing.Point(269, 131);
+            this.pnContent.Location = new System.Drawing.Point(259, 134);
             this.pnContent.Name = "pnContent";
-            this.pnContent.Size = new System.Drawing.Size(811, 593);
+            this.pnContent.Size = new System.Drawing.Size(811, 435);
             this.pnContent.TabIndex = 4;
             // 
             // FAdmin
