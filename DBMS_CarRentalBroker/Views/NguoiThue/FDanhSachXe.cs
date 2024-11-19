@@ -30,24 +30,32 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
 
         private void dtgvCarList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return;
-
-            int rowId = e.RowIndex;
-            DataGridViewRow row = dtgvCarList.Rows[rowId];
-            DataTable carDetails = nguoiThueDao.getCarDetails();
-
-            if (carDetails.Rows.Count > rowId)
+            try
             {
-                DataRow selectedRow = carDetails.Rows[rowId];
+                if (e.RowIndex < 0 || dtgvCarList.Rows[e.RowIndex].IsNewRow) return;
 
-                FChiTietXe carDetailFrm = new FChiTietXe();
+                int rowId = e.RowIndex;
+                DataGridViewRow row = dtgvCarList.Rows[rowId];
+                DataTable carDetails = nguoiThueDao.getCarDetails();
 
-                carDetailFrm.CarDetailRow = selectedRow;
-
-                carDetailFrm.LoadCarDetails();
-
-                carDetailFrm.ShowDialog();
+                if (carDetails.Rows.Count > rowId)
+                {
+                    DataRow selectedRow = carDetails.Rows[rowId];
+                    FChiTietXe carDetailFrm = new FChiTietXe();
+                    carDetailFrm.CarDetailRow = selectedRow;
+                    carDetailFrm.LoadCarDetails();
+                    carDetailFrm.ShowDialog();
+                }
+                else
+                {
+                    Console.WriteLine("Row index out of range in DataTable.");
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
         }
 
         public void RefreshCarList()

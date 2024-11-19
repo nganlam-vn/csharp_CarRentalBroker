@@ -92,7 +92,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(787, 55);
+            this.panel3.Size = new System.Drawing.Size(844, 55);
             this.panel3.TabIndex = 221;
             // 
             // lblClose
@@ -100,7 +100,7 @@
             this.lblClose.AutoSize = true;
             this.lblClose.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClose.ForeColor = System.Drawing.Color.White;
-            this.lblClose.Location = new System.Drawing.Point(694, 9);
+            this.lblClose.Location = new System.Drawing.Point(806, 9);
             this.lblClose.Name = "lblClose";
             this.lblClose.Size = new System.Drawing.Size(26, 25);
             this.lblClose.TabIndex = 166;
@@ -121,7 +121,7 @@
             // btnBookCar
             // 
             this.btnBookCar.BackColor = System.Drawing.Color.Teal;
-            this.btnBookCar.Location = new System.Drawing.Point(548, 525);
+            this.btnBookCar.Location = new System.Drawing.Point(602, 540);
             this.btnBookCar.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBookCar.Name = "btnBookCar";
             this.btnBookCar.Size = new System.Drawing.Size(118, 45);
@@ -293,7 +293,7 @@
             this.txtChuXe.Location = new System.Drawing.Point(588, 216);
             this.txtChuXe.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtChuXe.Name = "txtChuXe";
-            this.txtChuXe.Size = new System.Drawing.Size(174, 27);
+            this.txtChuXe.Size = new System.Drawing.Size(227, 27);
             this.txtChuXe.TabIndex = 204;
             // 
             // label6
@@ -329,7 +329,7 @@
             this.txtThuongHieu.Location = new System.Drawing.Point(588, 167);
             this.txtThuongHieu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtThuongHieu.Name = "txtThuongHieu";
-            this.txtThuongHieu.Size = new System.Drawing.Size(174, 27);
+            this.txtThuongHieu.Size = new System.Drawing.Size(227, 27);
             this.txtThuongHieu.TabIndex = 199;
             // 
             // txtPhanKhoi
@@ -337,7 +337,7 @@
             this.txtPhanKhoi.Location = new System.Drawing.Point(588, 125);
             this.txtPhanKhoi.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPhanKhoi.Name = "txtPhanKhoi";
-            this.txtPhanKhoi.Size = new System.Drawing.Size(174, 27);
+            this.txtPhanKhoi.Size = new System.Drawing.Size(227, 27);
             this.txtPhanKhoi.TabIndex = 198;
             // 
             // txtSoGhe
@@ -426,7 +426,7 @@
             this.txtMau.Location = new System.Drawing.Point(588, 78);
             this.txtMau.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtMau.Name = "txtMau";
-            this.txtMau.Size = new System.Drawing.Size(174, 27);
+            this.txtMau.Size = new System.Drawing.Size(227, 27);
             this.txtMau.TabIndex = 202;
             // 
             // pbXe
@@ -436,7 +436,7 @@
             this.pbXe.Location = new System.Drawing.Point(474, 269);
             this.pbXe.Margin = new System.Windows.Forms.Padding(2);
             this.pbXe.Name = "pbXe";
-            this.pbXe.Size = new System.Drawing.Size(288, 211);
+            this.pbXe.Size = new System.Drawing.Size(341, 236);
             this.pbXe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbXe.TabIndex = 222;
             this.pbXe.TabStop = false;
@@ -446,7 +446,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(787, 598);
+            this.ClientSize = new System.Drawing.Size(844, 598);
             this.Controls.Add(this.pbXe);
             this.Controls.Add(this.txtMau);
             this.Controls.Add(this.panel3);

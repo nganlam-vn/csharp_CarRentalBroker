@@ -38,8 +38,18 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
                 txtTheoNgay.Text = CarDetailRow["TheoNgay"].ToString();
                 txtTheoThang.Text = CarDetailRow["TheoThang"].ToString();
                 pbXe.Refresh();
-                string relativePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "imgs", CarDetailRow["HinhAnh"].ToString());
-                pbXe.ImageLocation = relativePath;
+
+                string projectPath = Directory.GetParent(Directory.GetParent(Application.StartupPath).FullName).FullName;
+                string imagePath = Path.Combine(projectPath, "imgs", CarDetailRow["HinhAnh"].ToString());
+
+                if (File.Exists(imagePath))
+                {
+                    pbXe.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    MessageBox.Show("Hình ảnh không tồn tại trong thư mục imgs. Đường dẫn: " + imagePath);
+                }
             }
         }
 
@@ -148,5 +158,6 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
         {
             this.Close();
         }
+
     }
 }
