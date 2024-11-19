@@ -25,7 +25,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
         private void FDanhSachXe_Load(object sender, EventArgs e)
         {
             RefreshCarList();
-            GoiYThuongHieu();
+            GoiYXe();
         }
 
         private void dtgvCarList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -79,18 +79,33 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
             }
         }
 
-        private void GoiYThuongHieu()
+        private void GoiYXe()
         {
-            if(Global.MaVT == 3)
+            DBConnect db = new DBConnect();
+            string sqlString = string.Format("SELECT * FROM func_GoiYXe('{0}')", Global.maND);
+            DataTable dt = db.thucThiDataTable(sqlString);
+            dgvXeGoiY.DataSource = dt;
+        }
+
+        private void dgvXeGoiY_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+
+            int rowId = e.RowIndex;
+            DataGridViewRow row = dtgvCarList.Rows[rowId];
+            DataTable carDetails = nguoiThueDao.getCarDetails();
+
+            if (carDetails.Rows.Count > rowId)
             {
-                DialogResult hopThoaiGoiY = MessageBox.Show("Bạn có muốn dùng gợi ý của chúng tôi không?", "Gợi ý thương hiệu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (hopThoaiGoiY == DialogResult.Yes)
-                {
-                    string sqlString = String.Format("SELECT dbo.func_GoiYThuongHieu('{0}')", Global.MaND);
-                    DBConnect db = new DBConnect();
-                    string tuKhoa = db.thucThiScalar(sqlString).ToString();
-                    txtTimKiem.Text = tuKhoa;
-                }
+                DataRow selectedRow = carDetails.Rows[rowId];
+
+                FChiTietXe carDetailFrm = new FChiTietXe();
+
+                carDetailFrm.CarDetailRow = selectedRow;
+
+                carDetailFrm.LoadCarDetails();
+
+                carDetailFrm.ShowDialog();
             }
         }
     }
