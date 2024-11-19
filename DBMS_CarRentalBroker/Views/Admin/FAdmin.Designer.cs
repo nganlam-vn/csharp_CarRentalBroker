@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnDSHopDong = new Guna.UI2.WinForms.Guna2Button();
             this.btnBestSeller = new Guna.UI2.WinForms.Guna2Button();
             this.btnLKNH = new Guna.UI2.WinForms.Guna2Button();
             this.btnQuanLyNguoiDung = new Guna.UI2.WinForms.Guna2Button();
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.btnXeTrenSan = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDSHopDong = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhoanThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.btnGiaHan = new Guna.UI2.WinForms.Guna2Button();
             this.btnDaDuocThue = new Guna.UI2.WinForms.Guna2Button();
@@ -65,6 +65,24 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(240, 585);
             this.guna2ShadowPanel1.TabIndex = 2;
+            // 
+            // btnDSHopDong
+            // 
+            this.btnDSHopDong.BorderColor = System.Drawing.Color.Silver;
+            this.btnDSHopDong.BorderThickness = 5;
+            this.btnDSHopDong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDSHopDong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDSHopDong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDSHopDong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDSHopDong.FillColor = System.Drawing.Color.Teal;
+            this.btnDSHopDong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSHopDong.ForeColor = System.Drawing.Color.White;
+            this.btnDSHopDong.Location = new System.Drawing.Point(3, 531);
+            this.btnDSHopDong.Name = "btnDSHopDong";
+            this.btnDSHopDong.Size = new System.Drawing.Size(231, 54);
+            this.btnDSHopDong.TabIndex = 4;
+            this.btnDSHopDong.Text = "Danh sách Hợp đồng";
+            this.btnDSHopDong.Click += new System.EventHandler(this.btnDSHopDong_Click);
             // 
             // btnBestSeller
             // 
@@ -156,24 +174,6 @@
             this.btnXeTrenSan.TabIndex = 6;
             this.btnXeTrenSan.Text = "Xe đang trên sàn";
             this.btnXeTrenSan.Click += new System.EventHandler(this.btnXeTrenSan_Click);
-            // 
-            // btnDSHopDong
-            // 
-            this.btnDSHopDong.BorderColor = System.Drawing.Color.Silver;
-            this.btnDSHopDong.BorderThickness = 5;
-            this.btnDSHopDong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDSHopDong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDSHopDong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDSHopDong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDSHopDong.FillColor = System.Drawing.Color.Teal;
-            this.btnDSHopDong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDSHopDong.ForeColor = System.Drawing.Color.White;
-            this.btnDSHopDong.Location = new System.Drawing.Point(3, 531);
-            this.btnDSHopDong.Name = "btnDSHopDong";
-            this.btnDSHopDong.Size = new System.Drawing.Size(231, 54);
-            this.btnDSHopDong.TabIndex = 4;
-            this.btnDSHopDong.Text = "Danh sách Hợp đồng";
-            this.btnDSHopDong.Click += new System.EventHandler(this.btnDSHopDong_Click);
             // 
             // btnKhoanThanhToan
             // 
@@ -288,6 +288,7 @@
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FAdmin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FAdmin_FormClosing);
             this.guna2ShadowPanel1.ResumeLayout(false);
