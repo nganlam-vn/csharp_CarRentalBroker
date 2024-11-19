@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblLienKetVi = new System.Windows.Forms.Label();
             this.lblLichSuGD = new System.Windows.Forms.Label();
             this.lblLichSuThue = new System.Windows.Forms.Label();
             this.lblThanhToan = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.lblLienKetVi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,13 +62,24 @@
             this.panel1.Size = new System.Drawing.Size(194, 551);
             this.panel1.TabIndex = 2;
             // 
+            // lblLienKetVi
+            // 
+            this.lblLienKetVi.AutoSize = true;
+            this.lblLienKetVi.ForeColor = System.Drawing.Color.White;
+            this.lblLienKetVi.Location = new System.Drawing.Point(26, 382);
+            this.lblLienKetVi.Name = "lblLienKetVi";
+            this.lblLienKetVi.Size = new System.Drawing.Size(134, 29);
+            this.lblLienKetVi.TabIndex = 8;
+            this.lblLienKetVi.Text = "Liên kết ví";
+            this.lblLienKetVi.Click += new System.EventHandler(this.lblLienKetVi_Click);
+            // 
             // lblLichSuGD
             // 
             this.lblLichSuGD.AutoSize = true;
             this.lblLichSuGD.ForeColor = System.Drawing.Color.White;
             this.lblLichSuGD.Location = new System.Drawing.Point(26, 322);
             this.lblLichSuGD.Name = "lblLichSuGD";
-            this.lblLichSuGD.Size = new System.Drawing.Size(146, 18);
+            this.lblLichSuGD.Size = new System.Drawing.Size(212, 29);
             this.lblLichSuGD.TabIndex = 7;
             this.lblLichSuGD.Text = "Lịch sử giao dịch";
             this.lblLichSuGD.Click += new System.EventHandler(this.lblLichSuGD_Click);
@@ -79,7 +90,7 @@
             this.lblLichSuThue.ForeColor = System.Drawing.Color.White;
             this.lblLichSuThue.Location = new System.Drawing.Point(26, 262);
             this.lblLichSuThue.Name = "lblLichSuThue";
-            this.lblLichSuThue.Size = new System.Drawing.Size(142, 18);
+            this.lblLichSuThue.Size = new System.Drawing.Size(204, 29);
             this.lblLichSuThue.TabIndex = 6;
             this.lblLichSuThue.Text = "Lịch sử đặt thuê";
             this.lblLichSuThue.Click += new System.EventHandler(this.lblLichSuThue_Click);
@@ -90,7 +101,7 @@
             this.lblThanhToan.ForeColor = System.Drawing.Color.White;
             this.lblThanhToan.Location = new System.Drawing.Point(26, 201);
             this.lblThanhToan.Name = "lblThanhToan";
-            this.lblThanhToan.Size = new System.Drawing.Size(101, 18);
+            this.lblThanhToan.Size = new System.Drawing.Size(148, 29);
             this.lblThanhToan.TabIndex = 5;
             this.lblThanhToan.Text = "Thanh toán";
             this.lblThanhToan.Click += new System.EventHandler(this.lblThanhToan_Click);
@@ -101,7 +112,7 @@
             this.lblTrangChu.ForeColor = System.Drawing.Color.White;
             this.lblTrangChu.Location = new System.Drawing.Point(26, 135);
             this.lblTrangChu.Name = "lblTrangChu";
-            this.lblTrangChu.Size = new System.Drawing.Size(86, 18);
+            this.lblTrangChu.Size = new System.Drawing.Size(131, 29);
             this.lblTrangChu.TabIndex = 1;
             this.lblTrangChu.Text = "Trang chủ";
             this.lblTrangChu.Click += new System.EventHandler(this.lblTrangChu_Click);
@@ -121,7 +132,7 @@
             this.lblDangXuat.ForeColor = System.Drawing.Color.White;
             this.lblDangXuat.Location = new System.Drawing.Point(46, 17);
             this.lblDangXuat.Name = "lblDangXuat";
-            this.lblDangXuat.Size = new System.Drawing.Size(92, 18);
+            this.lblDangXuat.Size = new System.Drawing.Size(136, 29);
             this.lblDangXuat.TabIndex = 0;
             this.lblDangXuat.Text = "Đăng xuất";
             this.lblDangXuat.Click += new System.EventHandler(this.lblDangXuat_Click);
@@ -138,7 +149,7 @@
             this.lblClose.ForeColor = System.Drawing.Color.White;
             this.lblClose.Location = new System.Drawing.Point(825, 9);
             this.lblClose.Name = "lblClose";
-            this.lblClose.Size = new System.Drawing.Size(26, 25);
+            this.lblClose.Size = new System.Drawing.Size(39, 38);
             this.lblClose.TabIndex = 3;
             this.lblClose.Text = "X";
             this.lblClose.Click += new System.EventHandler(this.lblClose_Click);
@@ -161,7 +172,7 @@
             this.label8.Location = new System.Drawing.Point(33, 19);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(316, 25);
+            this.label8.Size = new System.Drawing.Size(483, 38);
             this.label8.TabIndex = 166;
             this.label8.Text = "Hệ thống cho thuê xe ô tô";
             // 
@@ -172,20 +183,9 @@
             this.pnlContent.Size = new System.Drawing.Size(838, 475);
             this.pnlContent.TabIndex = 6;
             // 
-            // lblLienKetVi
-            // 
-            this.lblLienKetVi.AutoSize = true;
-            this.lblLienKetVi.ForeColor = System.Drawing.Color.White;
-            this.lblLienKetVi.Location = new System.Drawing.Point(26, 382);
-            this.lblLienKetVi.Name = "lblLienKetVi";
-            this.lblLienKetVi.Size = new System.Drawing.Size(94, 18);
-            this.lblLienKetVi.TabIndex = 8;
-            this.lblLienKetVi.Text = "Liên kết ví";
-            this.lblLienKetVi.Click += new System.EventHandler(this.lblLienKetVi_Click);
-            // 
             // FTrangChu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1057, 551);
@@ -198,6 +198,7 @@
             this.Name = "FTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDanhSachXe";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FTrangChu_FormClosing);
             this.Load += new System.EventHandler(this.FTrangChu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

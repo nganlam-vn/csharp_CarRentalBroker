@@ -1,4 +1,5 @@
-﻿using DBMS_CarRentalBroker.Dao;
+﻿using CarRentalBroker.Dao;
+using DBMS_CarRentalBroker.Dao;
 using System;
 using System.Data;
 using System.Drawing;
@@ -8,6 +9,7 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
 {
     public partial class FTrangChu : Form
     {
+        TaiKhoanDao taiKhoanDao = new TaiKhoanDao();
         public FTrangChu()
         {
             InitializeComponent();
@@ -68,14 +70,19 @@ namespace DBMS_CarRentalBroker.Views.NguoiThue
             this.Hide();
     
             FDangNhap fDangNhap = new FDangNhap();
-            fDangNhap.ShowDialog(); 
-
+            fDangNhap.ShowDialog();
+            taiKhoanDao.dangXuat();
             Application.Exit();
         }
 
         private void lblLienKetVi_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FLienKetTKNganHang());
+        }
+
+        private void FTrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            taiKhoanDao.dangXuat();
         }
     }
 }

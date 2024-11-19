@@ -1,4 +1,5 @@
-﻿using DBMS_CarRentalBroker.Views.NguoiThue;
+﻿using CarRentalBroker.Dao;
+using DBMS_CarRentalBroker.Views.NguoiThue;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,11 @@ namespace DBMS_CarRentalBroker.Views.Admin
     public partial class FAdmin : Form
     {
         private Form currentFormchild;
+        TaiKhoanDao taiKhoanDao = new TaiKhoanDao();
         public FAdmin()
         {
             InitializeComponent();
-            OpenChildForm(new FDanhSachXe());
+            OpenChildForm(new FXeTrenSan());
         }
 
         private void OpenChildForm(Form childForm)
@@ -38,10 +40,9 @@ namespace DBMS_CarRentalBroker.Views.Admin
             childForm.Show();
         }
 
-
         private void btnXeTrenSan_Click(object sender, EventArgs e)
         {
-            FDanhSachXe fXeTrenSan = new FDanhSachXe();
+            FXeTrenSan fXeTrenSan = new FXeTrenSan();
             OpenChildForm(fXeTrenSan);
 
         }
@@ -52,7 +53,6 @@ namespace DBMS_CarRentalBroker.Views.Admin
             OpenChildForm(fXeDaChoThue);
 
         }
-
         private void btnGiaHan_Click(object sender, EventArgs e)
         {
             FXeChoGiaHan fXeChoGiaHan = new FXeChoGiaHan();
@@ -61,14 +61,14 @@ namespace DBMS_CarRentalBroker.Views.Admin
 
         private void btnBestSeller_Click(object sender, EventArgs e)
         {
-            FTop5 fTop5 = new FTop5();
-            OpenChildForm(fTop5);
+            FThongKeXuHuong fThongKeXuHuong = new FThongKeXuHuong();
+            OpenChildForm(fThongKeXuHuong);
         }
 
         private void btnKhoanThanhToan_Click(object sender, EventArgs e)
         {
-            FDanhSachHopDong fDanhSachHopDong = new FDanhSachHopDong();
-            OpenChildForm(fDanhSachHopDong);
+            FCacKhoanThanhToan fCacKhoanThanhToan = new FCacKhoanThanhToan();
+            OpenChildForm(fCacKhoanThanhToan);
 
         }
 
@@ -94,6 +94,17 @@ namespace DBMS_CarRentalBroker.Views.Admin
         {
             FHopDong fHopDong = new FHopDong();
             OpenChildForm(fHopDong);
+
+        }
+
+        private void FAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            taiKhoanDao.dangXuat();
+        }
+        private void btnLKNH_Click(object sender, EventArgs e)
+        {
+            FLienKetTKNganHang fLienKetTKNganHang = new FLienKetTKNganHang();
+            OpenChildForm(fLienKetTKNganHang);
 
         }
     }
