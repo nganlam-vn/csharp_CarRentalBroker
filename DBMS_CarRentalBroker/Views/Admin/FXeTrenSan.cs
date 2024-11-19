@@ -34,7 +34,7 @@ namespace DBMS_CarRentalBroker.Views.Admin
             try
             {
                 // Câu lệnh SQL gọi hàm
-                string query = "SELECT * FROM dbo.f_LaySoGheTheoKeyword(@InputText)";
+                string query = "SELECT * FROM dbo.f_TraKQTheoKeyword(@InputText)";
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
                     command.CommandType = CommandType.Text;
