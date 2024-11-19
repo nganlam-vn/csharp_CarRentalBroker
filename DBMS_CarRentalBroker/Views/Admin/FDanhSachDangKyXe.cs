@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,71 +9,87 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
 
-
-namespace CarRentalBroker.Views.Admin
+namespace DBMS_CarRentalBroker.Views.Admin
 {
     public partial class FDanhSachDangKyXe : Form
     {
-        private int selectedXeId = -1; // Khai báo biến để lưu trữ ID xe được chọn
-        SqlConnection conn = new SqlConnection(DBMS_CarRentalBroker.Properties.Settings.Default.cnnStr);
+        DBConnection1 db = new DBConnection1();
         public FDanhSachDangKyXe()
         {
             InitializeComponent();
-            
+        }
+        private int selectedXeId = -1;
+
+        private void FDanhSachDangKyXe_Load(object sender, EventArgs e)
+        {
+            XeChoDuyet_Load();
+            XeTuChoi_Load();
+           
         }
 
-        private void DanhSachXe_Load(object sender, EventArgs e)
-        {
-            LoadDataChoDuyet();
-            LoadDataTuChoi();
+        private void XeChoDuyet_Load() {
+            SqlConnection conn = db.layKetNoi();
+            using (conn)
+            {
+                string query = "SELECT * FROM v_XeDangChoDuyet"; 
+                gvChoDuyet.DataSource = db.thucThiDataTable(query);
+            }
         }
 
-        private void LoadDataTuChoi()
+        private void XeTuChoi_Load()
         {
-            try
+
+            SqlConnection conn = db.layKetNoi();
+            using (conn) { 
+                string query = "SELECT * FROM v_XeTuChoi";
+                gvTuChoi.DataSource = db.thucThiDataTable(query);
+            }
+        }
+
+        private void btnTuChoi_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = db.layKetNoi();
+           
+            using (conn)
             {
                 conn.Open();
-                string TrangThai = "Từ chối";
-                string sqlStr = string.Format("SELECT MaXe, Ten, ThuongHieu, Mau FROM Xe WHERE TrangThai = N'{0}'", TrangThai);
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dtDanhSachXe = new DataTable();
-                adapter.Fill(dtDanhSachXe);
-                gvTuChoi.DataSource = dtDanhSachXe; 
-            }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+                
+                try
+                {
+                    
+                    if (selectedXeId != -1)
+                    {
+                        // Sử dụng SqlCommand để thực hiện truy vấn
+                        using (SqlCommand command = new SqlCommand("proc_TuChoi", conn))
+                        {
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@MaXe", selectedXeId);
+                            command.ExecuteNonQuery(); //executeNonQuery thực hiện câu lệnh sql như insert, update, delete
+                            MessageBox.Show("Xe đã được từ chối.");
+                            XeChoDuyet_Load();
+                            XeTuChoi_Load();
+                           
+                        }
 
-        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng chọn một xe để cập nhật.");
+                    }
+                }
 
-        private void LoadDataChoDuyet()
-        {
-            try
-            {
-                conn.Open();
-                string TrangThai = "Chờ duyệt";
-                string sqlStr = string.Format("SELECT MaXe, Ten, ThuongHieu, Mau FROM Xe WHERE TrangThai = N'{0}'", TrangThai);
 
-                SqlDataAdapter adapter = new SqlDataAdapter(sqlStr, conn);
-                DataTable dtDanhSachXe = new DataTable();
-                adapter.Fill(dtDanhSachXe);
-                gvChoDuyet.DataSource = dtDanhSachXe; /// gvHsinh = name cua data gridview
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
+                finally
+                {
+                    conn.Close();
+                }
             }
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        
         }
 
         private void gvChoDuyet_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -88,6 +105,7 @@ namespace CarRentalBroker.Views.Admin
                     selectedXeId = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
                     FChiTietXe fChiTietXe = new FChiTietXe(idXe);
                     fChiTietXe.Show();
+                    //MessageBox.Show("Xe đã chọn: " + idXe);
 
 
                 }
@@ -101,120 +119,82 @@ namespace CarRentalBroker.Views.Admin
             {
                 MessageBox.Show(exc.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
-            
-           
+
         }
 
         private void gvTuChoi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Kiểm tra xem dòng nào được chọn (tránh trường hợp nhấp vào tiêu đề cột)
-            if (e.RowIndex >= 0)
+            try
             {
-                // Lấy hàng hiện tại
-                DataGridViewRow selectedRow = gvTuChoi.Rows[e.RowIndex];
-                int idXe = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
-                FChiTietXe fChiTietXe = new FChiTietXe(idXe);
-                fChiTietXe.Show();
+                
+                if (e.RowIndex >= 0)
+                {
+                    // Lấy hàng hiện tại
+                    DataGridViewRow selectedRow = gvTuChoi.Rows[e.RowIndex];
+                    int idXe = int.Parse(selectedRow.Cells[0].Value.ToString()); //Cell[0] là cột mã xe
+                   
+                    FChiTietXe fChiTietXe = new FChiTietXe(idXe);
+                    fChiTietXe.Show();
+                    //MessageBox.Show("Xe đã chọn: " + idXe);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn một xe để xem chi tiết!");
+                }
+
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
             }
 
         }
 
         private void btnDuyet_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (selectedXeId != -1)
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("UPDATE Xe SET TrangThai = N'Chưa thuê' WHERE MaXe = {0}", selectedXeId);
-                   
-                    // Sử dụng SqlCommand để thực hiện truy vấn
-                    using (SqlCommand command = new SqlCommand(sqlStr, conn))
-                    {
-                        // Thực hiện truy vấn
-                        int rowsAffected = command.ExecuteNonQuery();
+            SqlConnection conn = db.layKetNoi();
 
-                        // Kiểm tra nếu có ít nhất một dòng được cập nhật
-                        if (rowsAffected > 0)
+            using (conn)
+            {
+                conn.Open();
+
+                try
+                {
+
+                    if (selectedXeId != -1)
+                    {
+                        // Sử dụng SqlCommand để thực hiện truy vấn
+                        using (SqlCommand command = new SqlCommand("proc_Duyet", conn))
                         {
-                            MessageBox.Show("Cập nhật trạng thái thành công!");
+                            command.CommandType = CommandType.StoredProcedure;
+                            command.Parameters.AddWithValue("@MaXe", selectedXeId);
+                            command.ExecuteNonQuery(); //executeNonQuery thực hiện câu lệnh sql như insert, update, delete
+                            MessageBox.Show("Xe đã được duyệt và đang chờ thanh toán");
+                            XeChoDuyet_Load();
+                            XeTuChoi_Load();
+
                         }
-                        else
-                        {
-                            MessageBox.Show("Không tìm thấy xe với ID đã chọn.");
-                        }
+
                     }
-                    LoadDataChoDuyet();
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng chọn một xe để cập nhật.");
-                }
-
-            }
-           
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-
-        }
-
-        private void btnTuChoi_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (selectedXeId != -1)
-                {
-                    conn.Open();
-                    string sqlStr = string.Format("UPDATE Xe SET TrangThai = N'Từ chối' WHERE MaXe = {0}", selectedXeId);
-
-                    // Sử dụng SqlCommand để thực hiện truy vấn
-                    using (SqlCommand command = new SqlCommand(sqlStr, conn))
+                    else
                     {
-                        // Thực hiện truy vấn
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        // Kiểm tra nếu có ít nhất một dòng được cập nhật
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Cập nhật trạng thái thành công!");
-                            
-                            LoadDataTuChoi();
-                            gvTuChoi.Refresh();
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Không tìm thấy xe với ID đã chọn.");
-                        }
+                        MessageBox.Show("Vui lòng chọn một xe để cập nhật.");
                     }
                 }
-                else
+
+
+                catch (Exception exc)
                 {
-                    MessageBox.Show("Vui lòng chọn một xe để cập nhật.");
+                    MessageBox.Show(exc.Message);
                 }
-                
+                finally
+                {
+                    conn.Close();
+                }
             }
-
-            catch (Exception exc)
-            {
-                MessageBox.Show(exc.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
         }
     }
 }
